@@ -1,0 +1,4 @@
+encoder_family,model_name,input_representation,recommended_columns,trust_remote_code,notes
+ChemBERT,seyonec/ChemBERTa-zinc-base-v1,smiles,canonical_smiles|connectivity_smiles,false,Good small-molecule SMILES baseline.
+MolFormer,ibm-research/MoLFormer-XL-both-10pct,smiles,canonical_smiles|connectivity_smiles,true,Strong SMILES encoder with long-context chemistry pretraining.
+SELFormer,HUBioDataLab/SELFormer,selfies,selfies_sequence,false,SELFIES-native encoder; use after SELFIES population.

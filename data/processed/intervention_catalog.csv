@@ -1,0 +1,13 @@
+intervention,mechanism_hint,surrogate_count,top_surrogates,similar_interventions,demo_priority
+Metformin,AMPK activation and glucose homeostasis,6,HbA1c|fasting insulin|HOMA-IR|CRP,Acarbose|Semaglutide|Empagliflozin,high
+Rapamycin,mTOR inhibition and autophagy,6,IL6|CRP|epigenetic clock|IGF-1,Spermidine|Metformin|NMN,high
+Acarbose,postprandial glucose modulation,6,HbA1c|fasting glucose|fasting insulin|HOMA-IR,Metformin|Semaglutide|Empagliflozin,medium
+Semaglutide,GLP-1 receptor agonism and satiety signaling,6,HbA1c|fasting glucose|fasting insulin|triglycerides,Liraglutide|Metformin|Empagliflozin,high
+Liraglutide,GLP-1 receptor agonism and metabolic regulation,6,HbA1c|fasting glucose|fasting insulin|CRP,Semaglutide|Metformin|Empagliflozin,medium
+Empagliflozin,SGLT2 inhibition and glucosuria-driven metabolic unloading,6,HbA1c|fasting glucose|NT-proBNP|body fat percentage,Metformin|Semaglutide|Acarbose,medium
+Dasatinib + Quercetin,senolytic combination targeting senescent cell survival pathways,6,p16INK4a expression|SASP panel|IL6|TNF-alpha,Fisetin|Rapamycin|Spermidine,high
+Fisetin,senolytic flavonoid with anti-inflammatory and stress-response effects,5,SASP panel|p16INK4a expression|IL6|TNF-alpha,Dasatinib + Quercetin|Resveratrol|Spermidine,medium
+Nicotinamide Riboside,NAD+ precursor supporting mitochondrial energetics,6,NAD+ NADH ratio|ATP production|mtDNA copy number|CRP,NMN|Metformin|Spermidine,high
+NMN,NAD+ precursor supporting redox balance and metabolic resilience,6,NAD+ NADH ratio|ATP production|mtDNA copy number|fasting insulin,Nicotinamide Riboside|Metformin|Spermidine,medium
+Spermidine,autophagy induction and cellular maintenance,5,epigenetic clock|CRP|IL6|GDF15,Rapamycin|NMN|Resveratrol,medium
+Resveratrol,stress-response signaling and metabolic modulation,6,CRP|IL6|TNF-alpha|fasting glucose,Fisetin|Metformin|Spermidine,medium

@@ -1,0 +1,9 @@
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+*.pyo
+*.pyd
+data/raw/*.jsonl
+data/raw/*.xml
+data/processed/*.tmp.csv

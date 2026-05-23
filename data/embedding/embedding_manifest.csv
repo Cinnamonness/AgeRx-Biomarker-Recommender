@@ -1,0 +1,10 @@
+file_name,record_count,unit,purpose,recommended_stage
+intervention_texts.csv,12,one row per intervention,embedding intervention descriptions,intervention encoder
+surrogate_texts.csv,19,one row per surrogate,embedding surrogate descriptions,surrogate encoder
+biomarker_semantic_texts.csv,19,one row per biomarker semantic profile,embedding biomarker semantics with hallmarks and MoA context,biomarker semantic encoder
+pair_texts.csv,70,one row per intervention-surrogate pair,pair retrieval and reranking corpus,pair retrieval
+retrieval_corpus.csv,120,one row per searchable document,FAISS or nearest-neighbor indexing corpus,index build
+queries.csv,42,one row per training/eval query,embedding retrieval queries,training and evaluation
+query_qrels.csv,276,one row per query-document relevance label,retrieval evaluation ground truth,evaluation
+contrastive_triplets.csv,140,one row per contrastive triplet,sentence-transformers or twin-tower fine-tuning,contrastive training
+pair_examples.csv,140,one row per labeled query-candidate example,binary reranker or classifier training,reranking

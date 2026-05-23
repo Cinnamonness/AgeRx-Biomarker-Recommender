@@ -1,0 +1,3 @@
+encoder_family,model_name,recommended_tables,text_column,notes
+PubMedBERT,microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext,pair_texts.csv|surrogate_texts.csv|biomarker_semantic_texts.csv,embedding_text,Strong biomedical text baseline for biomarker semantics and hallmark/MoA semantic profiles.
+BioBERT,dmis-lab/biobert-base-cased-v1.2,pair_texts.csv|surrogate_texts.csv|biomarker_semantic_texts.csv,embedding_text,Alternative biomedical encoder; currently the best validated right tower for biomarker semantic profiles in this repo.

@@ -1,0 +1,13 @@
+intervention,mechanism_hint,pubmed_query,match_terms,priority
+Metformin,AMPK activation and glucose homeostasis,(metformin[Title/Abstract] OR metformin[MeSH Terms]) AND (aging OR longevity OR healthspan OR biomarker OR clinical trial),metformin,high
+Rapamycin,mTOR inhibition and autophagy,(rapamycin[Title/Abstract] OR sirolimus[Title/Abstract]) AND (aging OR longevity OR biomarker OR trial),rapamycin|sirolimus,high
+Acarbose,postprandial glucose modulation,(acarbose[Title/Abstract]) AND (aging OR biomarker OR clinical trial),acarbose,high
+Semaglutide,GLP-1 receptor agonism and satiety signaling,(semaglutide[Title/Abstract]) AND (aging OR biomarker OR metabolic health OR clinical trial),semaglutide,high
+Liraglutide,GLP-1 receptor agonism and metabolic regulation,(liraglutide[Title/Abstract]) AND (aging OR biomarker OR metabolic health OR clinical trial),liraglutide,medium
+Empagliflozin,SGLT2 inhibition and glucosuria-driven metabolic unloading,(empagliflozin[Title/Abstract]) AND (biomarker OR metabolic OR cardiovascular OR trial),empagliflozin,medium
+Dasatinib + Quercetin,senolytic combination targeting senescent cell survival pathways,(dasatinib[Title/Abstract] AND quercetin[Title/Abstract]) AND (senescence OR aging OR biomarker),dasatinib|quercetin,high
+Fisetin,senolytic flavonoid with anti-inflammatory and stress-response effects,(fisetin[Title/Abstract]) AND (senescence OR aging OR biomarker),fisetin,medium
+Nicotinamide Riboside,NAD+ precursor supporting mitochondrial energetics,(nicotinamide riboside[Title/Abstract]) AND (aging OR biomarker OR mitochondrial OR trial),nicotinamide riboside,high
+NMN,NAD+ precursor supporting redox balance and metabolic resilience,(NMN[Title/Abstract] OR nicotinamide mononucleotide[Title/Abstract]) AND (aging OR biomarker OR mitochondrial OR trial),nmn|nicotinamide mononucleotide,high
+Spermidine,autophagy induction and cellular maintenance,(spermidine[Title/Abstract]) AND (aging OR longevity OR biomarker),spermidine,medium
+Resveratrol,stress-response signaling and metabolic modulation,(resveratrol[Title/Abstract]) AND (aging OR longevity OR biomarker),resveratrol,medium

@@ -1,0 +1,2 @@
+run_id,query_model,query_column,corpus_model,corpus_table,alignment,regularization,train_mrr@10,train_recall@5,train_ndcg@10,val_mrr@10,val_recall@5,val_ndcg@10,test_mrr@10,test_recall@5,test_ndcg@10
+molformer_biobert_pair_ridge_v1,ibm-research/MoLFormer-XL-both-10pct,canonical_smiles,dmis-lab/biobert-base-cased-v1.2,pair_texts.csv,ridge,1.0,0.566667,0.875,0.390187,0.0,0.0,0.0,0.25,0.5,0.151241

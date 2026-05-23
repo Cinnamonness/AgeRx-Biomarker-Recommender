@@ -1,0 +1,17 @@
+metric,value
+intervention_count,12
+surrogate_count,19
+biomarker_semantic_count,19
+pair_count,70
+query_count,42
+triplet_count,140
+pair_example_count,140
+interventions_train,8
+pairs_train,46
+queries_train,27
+interventions_val,2
+pairs_val,12
+queries_val,7
+interventions_test,2
+pairs_test,12
+queries_test,8

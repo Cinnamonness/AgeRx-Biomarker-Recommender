@@ -1,0 +1,7 @@
+query_text,expected_interventions,expected_surrogates,story
+Metformin-like AMPK activating compound for a short aging trial,Metformin|Acarbose|Empagliflozin,HbA1c|fasting insulin|HOMA-IR|CRP|IL6,Metabolic control plus reduced inflammaging
+mTOR inhibitor improving autophagy and nutrient sensing,Rapamycin|Spermidine|Metformin,IL6|CRP|epigenetic clock|IGF-1|GDF15,Nutrient sensing and inflammation-focused aging trial
+GLP-1-like anti-obesity molecule with cardiometabolic benefit,Semaglutide|Liraglutide|Empagliflozin,HbA1c|body fat percentage|triglycerides|LDL-C|fasting glucose,Short clinical trial with strong metabolic readouts
+Small-molecule senolytic clearing senescent cells,Dasatinib + Quercetin|Fisetin,p16INK4a expression|SASP panel|IL6|TNF-alpha|GDF15,Senescence burden and inflammatory secretome tracking
+NAD-boosting precursor for mitochondrial function and healthy aging,Nicotinamide Riboside|NMN,NAD+ NADH ratio|ATP production|mtDNA copy number|CRP,Mitochondrial energetics and redox-balance monitoring
+Polyphenol-like stress response modulator for inflammaging,Resveratrol|Fisetin|Spermidine,CRP|IL6|TNF-alpha|HOMA-IR|triglycerides,Inflammation and metabolic resilience

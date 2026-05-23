@@ -1,0 +1,71 @@
+query_id,doc_id,relevance,target_intervention
+mol_query_metformin,surrogate:hba1c,3,Metformin
+mol_query_metformin,surrogate:fasting_insulin,3,Metformin
+mol_query_metformin,surrogate:homa_ir,3,Metformin
+mol_query_metformin,surrogate:gdf15,2,Metformin
+mol_query_metformin,surrogate:crp,2,Metformin
+mol_query_metformin,surrogate:il6,2,Metformin
+mol_query_rapamycin,surrogate:il6,3,Rapamycin
+mol_query_rapamycin,surrogate:crp,3,Rapamycin
+mol_query_rapamycin,surrogate:epigenetic_clock,3,Rapamycin
+mol_query_rapamycin,surrogate:igf_1,2,Rapamycin
+mol_query_rapamycin,surrogate:fasting_insulin,2,Rapamycin
+mol_query_rapamycin,surrogate:gdf15,2,Rapamycin
+mol_query_acarbose,surrogate:hba1c,3,Acarbose
+mol_query_acarbose,surrogate:fasting_glucose,3,Acarbose
+mol_query_acarbose,surrogate:fasting_insulin,3,Acarbose
+mol_query_acarbose,surrogate:homa_ir,2,Acarbose
+mol_query_acarbose,surrogate:triglycerides,2,Acarbose
+mol_query_acarbose,surrogate:crp,2,Acarbose
+mol_query_semaglutide,surrogate:hba1c,3,Semaglutide
+mol_query_semaglutide,surrogate:fasting_glucose,3,Semaglutide
+mol_query_semaglutide,surrogate:body_fat_percentage,3,Semaglutide
+mol_query_semaglutide,surrogate:fasting_insulin,2,Semaglutide
+mol_query_semaglutide,surrogate:triglycerides,2,Semaglutide
+mol_query_semaglutide,surrogate:ldl_c,2,Semaglutide
+mol_query_liraglutide,surrogate:hba1c,3,Liraglutide
+mol_query_liraglutide,surrogate:fasting_glucose,3,Liraglutide
+mol_query_liraglutide,surrogate:body_fat_percentage,3,Liraglutide
+mol_query_liraglutide,surrogate:fasting_insulin,2,Liraglutide
+mol_query_liraglutide,surrogate:triglycerides,2,Liraglutide
+mol_query_liraglutide,surrogate:crp,2,Liraglutide
+mol_query_empagliflozin,surrogate:hba1c,3,Empagliflozin
+mol_query_empagliflozin,surrogate:fasting_glucose,3,Empagliflozin
+mol_query_empagliflozin,surrogate:nt_probnp,3,Empagliflozin
+mol_query_empagliflozin,surrogate:fasting_insulin,2,Empagliflozin
+mol_query_empagliflozin,surrogate:body_fat_percentage,2,Empagliflozin
+mol_query_empagliflozin,surrogate:crp,2,Empagliflozin
+mol_query_dasatinib_quercetin,surrogate:sasp_panel,3,Dasatinib + Quercetin
+mol_query_dasatinib_quercetin,surrogate:p16ink4a_expression,3,Dasatinib + Quercetin
+mol_query_dasatinib_quercetin,surrogate:il6,3,Dasatinib + Quercetin
+mol_query_dasatinib_quercetin,surrogate:tnf_alpha,2,Dasatinib + Quercetin
+mol_query_dasatinib_quercetin,surrogate:gdf15,2,Dasatinib + Quercetin
+mol_query_dasatinib_quercetin,surrogate:crp,2,Dasatinib + Quercetin
+mol_query_fisetin,surrogate:sasp_panel,3,Fisetin
+mol_query_fisetin,surrogate:p16ink4a_expression,3,Fisetin
+mol_query_fisetin,surrogate:il6,3,Fisetin
+mol_query_fisetin,surrogate:tnf_alpha,2,Fisetin
+mol_query_fisetin,surrogate:gdf15,2,Fisetin
+mol_query_nicotinamide_riboside,surrogate:nad_nadh_ratio,3,Nicotinamide Riboside
+mol_query_nicotinamide_riboside,surrogate:atp_production,3,Nicotinamide Riboside
+mol_query_nicotinamide_riboside,surrogate:mtdna_copy_number,3,Nicotinamide Riboside
+mol_query_nicotinamide_riboside,surrogate:fasting_insulin,2,Nicotinamide Riboside
+mol_query_nicotinamide_riboside,surrogate:crp,2,Nicotinamide Riboside
+mol_query_nicotinamide_riboside,surrogate:il6,2,Nicotinamide Riboside
+mol_query_nmn,surrogate:nad_nadh_ratio,3,NMN
+mol_query_nmn,surrogate:atp_production,3,NMN
+mol_query_nmn,surrogate:mtdna_copy_number,3,NMN
+mol_query_nmn,surrogate:epigenetic_clock,2,NMN
+mol_query_nmn,surrogate:fasting_insulin,2,NMN
+mol_query_nmn,surrogate:crp,2,NMN
+mol_query_spermidine,surrogate:epigenetic_clock,3,Spermidine
+mol_query_spermidine,surrogate:crp,3,Spermidine
+mol_query_spermidine,surrogate:il6,3,Spermidine
+mol_query_spermidine,surrogate:mtdna_copy_number,2,Spermidine
+mol_query_spermidine,surrogate:gdf15,2,Spermidine
+mol_query_resveratrol,surrogate:crp,3,Resveratrol
+mol_query_resveratrol,surrogate:il6,3,Resveratrol
+mol_query_resveratrol,surrogate:homa_ir,3,Resveratrol
+mol_query_resveratrol,surrogate:tnf_alpha,2,Resveratrol
+mol_query_resveratrol,surrogate:fasting_glucose,2,Resveratrol
+mol_query_resveratrol,surrogate:triglycerides,2,Resveratrol

@@ -1,0 +1,10 @@
+file_name,record_count,purpose
+molecular_interventions.csv,12,one row per molecular query intervention
+molecular_pair_qrels.csv,70,pair retrieval relevance labels
+molecular_surrogate_qrels.csv,70,surrogate retrieval relevance labels
+molecular_biomarker_semantic_qrels.csv,70,biomarker semantic retrieval relevance labels
+molecule_to_pair_triplets.csv,70,cross-modal training triplets for pair retrieval
+molecule_to_surrogate_triplets.csv,70,cross-modal training triplets for surrogate retrieval
+molecule_to_biomarker_semantic_triplets.csv,70,cross-modal training triplets for biomarker semantic retrieval
+encoder_candidates.csv,5,encoder comparison candidate grid
+model_comparison_runs.csv,15,benchmark run plan across encoders and tasks

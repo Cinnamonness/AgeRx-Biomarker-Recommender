@@ -1,0 +1,71 @@
+row_id,split,text_column,model_name,title
+acarbose_hba1c,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HbA1c
+acarbose_fasting_glucose,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting glucose
+acarbose_fasting_insulin,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+acarbose_homa_ir,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HOMA-IR
+acarbose_triglycerides,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,triglycerides
+acarbose_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+dasatinib_quercetin_sasp_panel,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,SASP panel
+dasatinib_quercetin_p16ink4a_expression,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,p16INK4a expression
+dasatinib_quercetin_il6,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+dasatinib_quercetin_tnf_alpha,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,TNF-alpha
+dasatinib_quercetin_gdf15,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,GDF15
+dasatinib_quercetin_crp,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+empagliflozin_hba1c,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HbA1c
+empagliflozin_fasting_glucose,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting glucose
+empagliflozin_nt_probnp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,NT-proBNP
+empagliflozin_fasting_insulin,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+empagliflozin_body_fat_percentage,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,body fat percentage
+empagliflozin_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+fisetin_sasp_panel,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,SASP panel
+fisetin_p16ink4a_expression,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,p16INK4a expression
+fisetin_il6,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+fisetin_tnf_alpha,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,TNF-alpha
+fisetin_gdf15,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,GDF15
+liraglutide_hba1c,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HbA1c
+liraglutide_fasting_glucose,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting glucose
+liraglutide_body_fat_percentage,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,body fat percentage
+liraglutide_fasting_insulin,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+liraglutide_triglycerides,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,triglycerides
+liraglutide_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+metformin_hba1c,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HbA1c
+metformin_fasting_insulin,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+metformin_homa_ir,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HOMA-IR
+metformin_gdf15,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,GDF15
+metformin_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+metformin_il6,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+nmn_nad_nadh_ratio,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,NAD+ NADH ratio
+nmn_atp_production,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,ATP production
+nmn_mtdna_copy_number,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,mtDNA copy number
+nmn_epigenetic_clock,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,epigenetic clock
+nmn_fasting_insulin,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+nmn_crp,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+nicotinamide_riboside_nad_nadh_ratio,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,NAD+ NADH ratio
+nicotinamide_riboside_atp_production,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,ATP production
+nicotinamide_riboside_mtdna_copy_number,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,mtDNA copy number
+nicotinamide_riboside_fasting_insulin,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+nicotinamide_riboside_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+nicotinamide_riboside_il6,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+rapamycin_il6,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+rapamycin_crp,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+rapamycin_epigenetic_clock,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,epigenetic clock
+rapamycin_igf_1,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,IGF-1
+rapamycin_fasting_insulin,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+rapamycin_gdf15,val,embedding_text,dmis-lab/biobert-base-cased-v1.2,GDF15
+resveratrol_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+resveratrol_il6,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+resveratrol_homa_ir,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,HOMA-IR
+resveratrol_tnf_alpha,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,TNF-alpha
+resveratrol_fasting_glucose,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting glucose
+resveratrol_triglycerides,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,triglycerides
+semaglutide_hba1c,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,HbA1c
+semaglutide_fasting_glucose,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting glucose
+semaglutide_body_fat_percentage,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,body fat percentage
+semaglutide_fasting_insulin,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,fasting insulin
+semaglutide_triglycerides,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,triglycerides
+semaglutide_ldl_c,test,embedding_text,dmis-lab/biobert-base-cased-v1.2,LDL-C
+spermidine_epigenetic_clock,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,epigenetic clock
+spermidine_crp,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,CRP
+spermidine_il6,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,IL6
+spermidine_mtdna_copy_number,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,mtDNA copy number
+spermidine_gdf15,train,embedding_text,dmis-lab/biobert-base-cased-v1.2,GDF15

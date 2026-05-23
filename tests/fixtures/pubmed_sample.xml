@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>100001</PMID>
+      <Article>
+        <ArticleTitle>Metformin intervention improves HbA1c and CRP in older adults</ArticleTitle>
+        <Abstract>
+          <AbstractText>In this randomized clinical trial, metformin reduced HbA1c and C-reactive protein in older adults with metabolic dysfunction.</AbstractText>
+        </Abstract>
+        <Journal>
+          <Title>Journal of Longevity Trials</Title>
+          <JournalIssue>
+            <PubDate>
+              <Year>2022</Year>
+            </PubDate>
+          </JournalIssue>
+        </Journal>
+        <PublicationTypeList>
+          <PublicationType>Randomized Controlled Trial</PublicationType>
+        </PublicationTypeList>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="doi">10.1000/metformin.1</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>100002</PMID>
+      <Article>
+        <ArticleTitle>Rapamycin lowers IL-6 in aging biomarker study</ArticleTitle>
+        <Abstract>
+          <AbstractText>Rapamycin treatment was associated with lower IL-6 and reduced inflammatory biomarker burden in an aging cohort.</AbstractText>
+        </Abstract>
+        <Journal>
+          <Title>Geroscience Reports</Title>
+          <JournalIssue>
+            <PubDate>
+              <Year>2021</Year>
+            </PubDate>
+          </JournalIssue>
+        </Journal>
+        <PublicationTypeList>
+          <PublicationType>Clinical Trial</PublicationType>
+        </PublicationTypeList>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="doi">10.1000/rapamycin.1</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+</PubmedArticleSet>

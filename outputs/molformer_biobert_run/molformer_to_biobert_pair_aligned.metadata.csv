@@ -1,0 +1,13 @@
+row_id,split,intervention,input_column,model_name,molecule_type,component_count,alignment_train_split,alignment_regularization,alignment_target_model,used_for_alignment_train
+mol_query_metformin,train,Metformin,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_rapamycin,val,Rapamycin,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,no
+mol_query_acarbose,train,Acarbose,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_semaglutide,test,Semaglutide,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,no
+mol_query_liraglutide,train,Liraglutide,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_empagliflozin,train,Empagliflozin,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_dasatinib_quercetin,test,Dasatinib + Quercetin,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,combination,2,train,1.0,dmis-lab/biobert-base-cased-v1.2,no
+mol_query_fisetin,train,Fisetin,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_nicotinamide_riboside,train,Nicotinamide Riboside,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_nmn,val,NMN,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,no
+mol_query_spermidine,train,Spermidine,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes
+mol_query_resveratrol,train,Resveratrol,canonical_smiles,ibm-research/MoLFormer-XL-both-10pct,single_molecule,1,train,1.0,dmis-lab/biobert-base-cased-v1.2,yes

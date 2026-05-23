@@ -1,0 +1,35 @@
+canonical_name,synonyms,category,pathway,hallmark
+CRP,CRP|C-reactive protein|hs-CRP,inflammation,inflammation signaling,inflammaging
+IL6,IL6|IL-6|interleukin 6,inflammation,cytokine signaling,inflammaging
+TNF-alpha,TNF-alpha|TNFa|tumor necrosis factor alpha,inflammation,cytokine signaling,inflammaging
+MCP-1,MCP-1|CCL2,inflammation,chemokine signaling,inflammaging
+GDF15,GDF15|growth differentiation factor 15,stress response,integrated stress response,cellular senescence
+HbA1c,HbA1c|A1c|glycated hemoglobin,metabolic,glucose metabolism,deregulated nutrient sensing
+fasting glucose,fasting glucose|fasting plasma glucose|FPG,metabolic,glucose metabolism,deregulated nutrient sensing
+fasting insulin,fasting insulin|plasma insulin,metabolic,insulin signaling,deregulated nutrient sensing
+HOMA-IR,HOMA-IR|homeostatic model assessment insulin resistance,metabolic,insulin signaling,deregulated nutrient sensing
+triglycerides,triglycerides|TG,metabolic,lipid metabolism,deregulated nutrient sensing
+LDL-C,LDL-C|LDL cholesterol|low-density lipoprotein cholesterol,metabolic,lipid metabolism,deregulated nutrient sensing
+HDL-C,HDL-C|HDL cholesterol|high-density lipoprotein cholesterol,metabolic,lipid metabolism,deregulated nutrient sensing
+ApoB,ApoB|apolipoprotein B,metabolic,lipoprotein transport,deregulated nutrient sensing
+IGF-1,IGF-1|insulin like growth factor 1,growth signaling,insulin IGF signaling,deregulated nutrient sensing
+VO2 max,VO2 max|VO2peak|maximal oxygen uptake,functional,mitochondrial adaptation,mitochondrial dysfunction
+lactate threshold,lactate threshold,functional,mitochondrial adaptation,mitochondrial dysfunction
+HRV,HRV|heart rate variability,functional,autonomic recovery,altered intercellular communication
+resting heart rate,resting heart rate|RHR,functional,cardiovascular conditioning,altered intercellular communication
+cortisol rhythm,cortisol rhythm|diurnal cortisol|cortisol slope,stress axis,circadian regulation,altered intercellular communication
+p16INK4a expression,p16INK4a|CDKN2A|p16 expression,senescence,cell cycle arrest,cellular senescence
+SASP panel,SASP|senescence-associated secretory phenotype|senescence associated secretory phenotype,senescence,secretory phenotype,cellular senescence
+epigenetic clock,epigenetic clock|DNA methylation clock|biological age clock,epigenetic aging,aging clocks,genomic instability
+GrimAge,GrimAge,epigenetic aging,aging clocks,genomic instability
+PhenoAge,PhenoAge,epigenetic aging,aging clocks,genomic instability
+DunedinPACE,DunedinPACE,epigenetic aging,aging clocks,genomic instability
+NAD+ NADH ratio,NAD+|NADH ratio|NAD+/NADH ratio,mitochondrial,redox balance,mitochondrial dysfunction
+ATP production,ATP production|cellular ATP,mitochondrial,bioenergetics,mitochondrial dysfunction
+mtDNA copy number,mtDNA copy number|mitochondrial DNA copy number,mitochondrial,mitochondrial maintenance,mitochondrial dysfunction
+telomere length,telomere length,cellular aging,replicative aging,genomic instability
+cystatin C,cystatin C,organ function,kidney function,loss of proteostasis
+creatinine,creatinine,organ function,kidney function,loss of proteostasis
+NT-proBNP,NT-proBNP|N terminal pro BNP,cardiovascular,cardiac stress,altered intercellular communication
+body fat percentage,body fat percentage|body fat,body composition,energy balance,deregulated nutrient sensing
+lean mass,lean mass|fat free mass,body composition,muscle maintenance,stem cell exhaustion
