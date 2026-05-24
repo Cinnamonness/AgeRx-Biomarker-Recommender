@@ -1,0 +1,141 @@
+query_id,intervention,split,rank,candidate_id,surrogate,score,relevance
+intervention:bleomycin,Bleomycin,val,1,surrogate:hba1c,HbA1c,0.701058,0
+intervention:bleomycin,Bleomycin,val,2,surrogate:sasp_panel,SASP panel,0.640139,3
+intervention:bleomycin,Bleomycin,val,3,surrogate:il6,IL6,0.638679,0
+intervention:bleomycin,Bleomycin,val,4,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.619508,0
+intervention:bleomycin,Bleomycin,val,5,surrogate:met,MET,0.592976,0
+intervention:bleomycin,Bleomycin,val,6,surrogate:creatinine,creatinine,0.503525,0
+intervention:bleomycin,Bleomycin,val,7,surrogate:p16ink4a_expression,p16INK4a expression,0.500592,2
+intervention:bleomycin,Bleomycin,val,8,surrogate:triglycerides,triglycerides,0.476482,0
+intervention:bleomycin,Bleomycin,val,9,surrogate:fasting_glucose,fasting glucose,0.466563,0
+intervention:bleomycin,Bleomycin,val,10,surrogate:telomere_length,telomere length,0.465694,0
+intervention:coenzyme_q10,Coenzyme Q10,val,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.675969,0
+intervention:coenzyme_q10,Coenzyme Q10,val,2,surrogate:hba1c,HbA1c,0.646161,0
+intervention:coenzyme_q10,Coenzyme Q10,val,3,surrogate:sasp_panel,SASP panel,0.637402,0
+intervention:coenzyme_q10,Coenzyme Q10,val,4,surrogate:il6,IL6,0.628657,2
+intervention:coenzyme_q10,Coenzyme Q10,val,5,surrogate:met,MET,0.591213,0
+intervention:coenzyme_q10,Coenzyme Q10,val,6,surrogate:fasting_glucose,fasting glucose,0.505619,0
+intervention:coenzyme_q10,Coenzyme Q10,val,7,surrogate:p16ink4a_expression,p16INK4a expression,0.503898,0
+intervention:coenzyme_q10,Coenzyme Q10,val,8,surrogate:telomere_length,telomere length,0.483461,0
+intervention:coenzyme_q10,Coenzyme Q10,val,9,surrogate:triglycerides,triglycerides,0.477154,2
+intervention:coenzyme_q10,Coenzyme Q10,val,10,surrogate:creatinine,creatinine,0.466423,0
+intervention:dapagliflozin,Dapagliflozin,val,1,surrogate:hba1c,HbA1c,0.745719,3
+intervention:dapagliflozin,Dapagliflozin,val,2,surrogate:sasp_panel,SASP panel,0.70403,0
+intervention:dapagliflozin,Dapagliflozin,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.699814,0
+intervention:dapagliflozin,Dapagliflozin,val,4,surrogate:il6,IL6,0.65499,0
+intervention:dapagliflozin,Dapagliflozin,val,5,surrogate:met,MET,0.603948,3
+intervention:dapagliflozin,Dapagliflozin,val,6,surrogate:creatinine,creatinine,0.567978,3
+intervention:dapagliflozin,Dapagliflozin,val,7,surrogate:nt_probnp,NT-proBNP,0.558144,3
+intervention:dapagliflozin,Dapagliflozin,val,8,surrogate:fasting_glucose,fasting glucose,0.512332,0
+intervention:dapagliflozin,Dapagliflozin,val,9,surrogate:p16ink4a_expression,p16INK4a expression,0.505317,0
+intervention:dapagliflozin,Dapagliflozin,val,10,surrogate:telomere_length,telomere length,0.485702,0
+intervention:dasatinib,Dasatinib,val,1,surrogate:sasp_panel,SASP panel,0.75195,3
+intervention:dasatinib,Dasatinib,val,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.733549,0
+intervention:dasatinib,Dasatinib,val,3,surrogate:il6,IL6,0.707707,3
+intervention:dasatinib,Dasatinib,val,4,surrogate:hba1c,HbA1c,0.699827,0
+intervention:dasatinib,Dasatinib,val,5,surrogate:p16ink4a_expression,p16INK4a expression,0.641458,3
+intervention:dasatinib,Dasatinib,val,6,surrogate:met,MET,0.603353,0
+intervention:dasatinib,Dasatinib,val,7,surrogate:telomere_length,telomere length,0.574168,0
+intervention:dasatinib,Dasatinib,val,8,surrogate:fasting_glucose,fasting glucose,0.572966,0
+intervention:dasatinib,Dasatinib,val,9,surrogate:triglycerides,triglycerides,0.532258,2
+intervention:dasatinib,Dasatinib,val,10,surrogate:creatinine,creatinine,0.502337,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,1,surrogate:hba1c,HbA1c,0.789586,3
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,2,surrogate:met,MET,0.700684,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,3,surrogate:creatinine,creatinine,0.687455,2
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,4,surrogate:lean_mass,lean mass,0.662306,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,5,surrogate:fasting_glucose,fasting glucose,0.644882,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,6,surrogate:crp,CRP,0.628788,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,7,surrogate:nt_probnp,NT-proBNP,0.554748,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,8,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.514756,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,9,surrogate:sasp_panel,SASP panel,0.450083,0
+intervention:glp_1_receptor_agonists,Glp-1 Receptor Agonists,val,10,surrogate:triglycerides,triglycerides,0.433181,0
+intervention:insulin,Insulin,val,1,surrogate:hba1c,HbA1c,0.686603,3
+intervention:insulin,Insulin,val,2,surrogate:met,MET,0.619889,0
+intervention:insulin,Insulin,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.607895,0
+intervention:insulin,Insulin,val,4,surrogate:creatinine,creatinine,0.573263,0
+intervention:insulin,Insulin,val,5,surrogate:fasting_glucose,fasting glucose,0.568723,0
+intervention:insulin,Insulin,val,6,surrogate:lean_mass,lean mass,0.520005,3
+intervention:insulin,Insulin,val,7,surrogate:nt_probnp,NT-proBNP,0.510873,0
+intervention:insulin,Insulin,val,8,surrogate:sasp_panel,SASP panel,0.509221,0
+intervention:insulin,Insulin,val,9,surrogate:crp,CRP,0.504445,3
+intervention:insulin,Insulin,val,10,surrogate:triglycerides,triglycerides,0.442884,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,1,surrogate:hba1c,HbA1c,0.607226,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,2,surrogate:sasp_panel,SASP panel,0.577764,2
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.564226,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,4,surrogate:il6,IL6,0.53253,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,5,surrogate:met,MET,0.469804,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,6,surrogate:creatinine,creatinine,0.469777,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,7,surrogate:nt_probnp,NT-proBNP,0.427331,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,8,surrogate:fasting_glucose,fasting glucose,0.416278,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,9,surrogate:telomere_length,telomere length,0.396984,0
+intervention:microglial_depletion_repopulation_paradigms,Microglial Depletion-Repopulation Paradigms,val,10,surrogate:p16ink4a_expression,p16INK4a expression,0.364717,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,1,surrogate:hba1c,HbA1c,0.747668,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,2,surrogate:sasp_panel,SASP panel,0.683769,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,3,surrogate:met,MET,0.654792,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,4,surrogate:creatinine,creatinine,0.63138,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.630431,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,6,surrogate:il6,IL6,0.618406,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,7,surrogate:fasting_glucose,fasting glucose,0.560218,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,8,surrogate:nt_probnp,NT-proBNP,0.553725,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,9,surrogate:triglycerides,triglycerides,0.4902,0
+intervention:mtor_inhibitors,Mtor Inhibitors,val,10,surrogate:lean_mass,lean mass,0.45467,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,1,surrogate:hba1c,HbA1c,0.707446,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.640027,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,3,surrogate:met,MET,0.609622,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,4,surrogate:sasp_panel,SASP panel,0.599421,1
+intervention:n_acetylcysteine,N-Acetylcysteine,val,5,surrogate:creatinine,creatinine,0.570915,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,6,surrogate:il6,IL6,0.563385,3
+intervention:n_acetylcysteine,N-Acetylcysteine,val,7,surrogate:fasting_glucose,fasting glucose,0.533476,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,8,surrogate:nt_probnp,NT-proBNP,0.532213,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,9,surrogate:triglycerides,triglycerides,0.458187,0
+intervention:n_acetylcysteine,N-Acetylcysteine,val,10,surrogate:crp,CRP,0.442125,3
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,1,surrogate:sasp_panel,SASP panel,0.758262,1
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.743151,3
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,3,surrogate:il6,IL6,0.723049,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,4,surrogate:hba1c,HbA1c,0.704902,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,5,surrogate:met,MET,0.585482,2
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,6,surrogate:p16ink4a_expression,p16INK4a expression,0.578016,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,7,surrogate:fasting_glucose,fasting glucose,0.522573,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,8,surrogate:telomere_length,telomere length,0.517559,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,9,surrogate:creatinine,creatinine,0.507927,0
+intervention:nicotinamide_riboside,Nicotinamide Riboside,val,10,surrogate:nt_probnp,NT-proBNP,0.503608,0
+intervention:rapamycin,Rapamycin,val,1,surrogate:hba1c,HbA1c,0.700378,0
+intervention:rapamycin,Rapamycin,val,2,surrogate:sasp_panel,SASP panel,0.644632,0
+intervention:rapamycin,Rapamycin,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.632673,0
+intervention:rapamycin,Rapamycin,val,4,surrogate:met,MET,0.602662,0
+intervention:rapamycin,Rapamycin,val,5,surrogate:il6,IL6,0.589354,0
+intervention:rapamycin,Rapamycin,val,6,surrogate:creatinine,creatinine,0.529952,0
+intervention:rapamycin,Rapamycin,val,7,surrogate:fasting_glucose,fasting glucose,0.504582,0
+intervention:rapamycin,Rapamycin,val,8,surrogate:nt_probnp,NT-proBNP,0.49962,0
+intervention:rapamycin,Rapamycin,val,9,surrogate:triglycerides,triglycerides,0.492663,0
+intervention:rapamycin,Rapamycin,val,10,surrogate:p16ink4a_expression,p16INK4a expression,0.427643,0
+intervention:senolytic_therapies,Senolytic Therapies,val,1,surrogate:sasp_panel,SASP panel,0.791979,3
+intervention:senolytic_therapies,Senolytic Therapies,val,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.780786,0
+intervention:senolytic_therapies,Senolytic Therapies,val,3,surrogate:il6,IL6,0.752715,0
+intervention:senolytic_therapies,Senolytic Therapies,val,4,surrogate:hba1c,HbA1c,0.695331,0
+intervention:senolytic_therapies,Senolytic Therapies,val,5,surrogate:p16ink4a_expression,p16INK4a expression,0.675799,2
+intervention:senolytic_therapies,Senolytic Therapies,val,6,surrogate:met,MET,0.61519,0
+intervention:senolytic_therapies,Senolytic Therapies,val,7,surrogate:telomere_length,telomere length,0.600255,0
+intervention:senolytic_therapies,Senolytic Therapies,val,8,surrogate:fasting_glucose,fasting glucose,0.580217,0
+intervention:senolytic_therapies,Senolytic Therapies,val,9,surrogate:triglycerides,triglycerides,0.561412,0
+intervention:senolytic_therapies,Senolytic Therapies,val,10,surrogate:creatinine,creatinine,0.484989,0
+intervention:senolytics,Senolytics,val,1,surrogate:sasp_panel,SASP panel,0.772972,3
+intervention:senolytics,Senolytics,val,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.755107,2
+intervention:senolytics,Senolytics,val,3,surrogate:hba1c,HbA1c,0.7253,0
+intervention:senolytics,Senolytics,val,4,surrogate:il6,IL6,0.720302,0
+intervention:senolytics,Senolytics,val,5,surrogate:p16ink4a_expression,p16INK4a expression,0.632147,0
+intervention:senolytics,Senolytics,val,6,surrogate:met,MET,0.578725,0
+intervention:senolytics,Senolytics,val,7,surrogate:triglycerides,triglycerides,0.568704,0
+intervention:senolytics,Senolytics,val,8,surrogate:telomere_length,telomere length,0.56067,0
+intervention:senolytics,Senolytics,val,9,surrogate:fasting_glucose,fasting glucose,0.550181,0
+intervention:senolytics,Senolytics,val,10,surrogate:creatinine,creatinine,0.5191,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,1,surrogate:sasp_panel,SASP panel,0.746935,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,2,surrogate:hba1c,HbA1c,0.727844,3
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.719098,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,4,surrogate:il6,IL6,0.701035,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,5,surrogate:met,MET,0.610445,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,6,surrogate:nt_probnp,NT-proBNP,0.560164,2
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,7,surrogate:p16ink4a_expression,p16INK4a expression,0.549247,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,8,surrogate:telomere_length,telomere length,0.546819,0
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,9,surrogate:creatinine,creatinine,0.545321,3
+intervention:sglt2_inhibitors,Sglt2 Inhibitors,val,10,surrogate:fasting_glucose,fasting glucose,0.519068,0

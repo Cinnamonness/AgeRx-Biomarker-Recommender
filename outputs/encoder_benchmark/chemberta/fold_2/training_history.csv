@@ -1,0 +1,2 @@
+epoch,total_loss,bce_loss,triplet_loss,val_mrr@10
+1,1.779852,1.594988,0.184864,0.479932

@@ -1,0 +1,141 @@
+query_id,intervention,split,rank,candidate_id,surrogate,score,relevance
+intervention:acarbose,Acarbose,val,1,surrogate:sasp_panel,SASP panel,0.364912,2
+intervention:acarbose,Acarbose,val,2,surrogate:hba1c,HbA1c,0.304672,1
+intervention:acarbose,Acarbose,val,3,surrogate:pten,PTEN,0.286068,0
+intervention:acarbose,Acarbose,val,4,surrogate:p16ink4a_expression,p16INK4a expression,0.281743,0
+intervention:acarbose,Acarbose,val,5,surrogate:nt_probnp,NT-proBNP,0.275494,0
+intervention:acarbose,Acarbose,val,6,surrogate:il6,IL6,0.275101,0
+intervention:acarbose,Acarbose,val,7,surrogate:met,MET,0.268928,0
+intervention:acarbose,Acarbose,val,8,surrogate:kdr,KDR,0.26383,0
+intervention:acarbose,Acarbose,val,9,surrogate:creatinine,creatinine,0.259567,0
+intervention:acarbose,Acarbose,val,10,surrogate:cd3e,CD3E,0.252048,0
+intervention:betulinic_acid,Betulinic Acid,val,1,surrogate:sasp_panel,SASP panel,0.374994,0
+intervention:betulinic_acid,Betulinic Acid,val,2,surrogate:hba1c,HbA1c,0.353223,0
+intervention:betulinic_acid,Betulinic Acid,val,3,surrogate:il6,IL6,0.315229,0
+intervention:betulinic_acid,Betulinic Acid,val,4,surrogate:met,MET,0.311623,0
+intervention:betulinic_acid,Betulinic Acid,val,5,surrogate:creatinine,creatinine,0.302565,0
+intervention:betulinic_acid,Betulinic Acid,val,6,surrogate:p16ink4a_expression,p16INK4a expression,0.289835,0
+intervention:betulinic_acid,Betulinic Acid,val,7,surrogate:nt_probnp,NT-proBNP,0.287846,0
+intervention:betulinic_acid,Betulinic Acid,val,8,surrogate:pten,PTEN,0.274481,0
+intervention:betulinic_acid,Betulinic Acid,val,9,surrogate:cd3e,CD3E,0.268055,0
+intervention:betulinic_acid,Betulinic Acid,val,10,surrogate:triglycerides,triglycerides,0.257719,0
+intervention:curcumin,Curcumin,val,1,surrogate:sasp_panel,SASP panel,0.409815,2
+intervention:curcumin,Curcumin,val,2,surrogate:hba1c,HbA1c,0.340474,0
+intervention:curcumin,Curcumin,val,3,surrogate:il6,IL6,0.315495,3
+intervention:curcumin,Curcumin,val,4,surrogate:p16ink4a_expression,p16INK4a expression,0.290774,0
+intervention:curcumin,Curcumin,val,5,surrogate:triglycerides,triglycerides,0.289215,0
+intervention:curcumin,Curcumin,val,6,surrogate:nt_probnp,NT-proBNP,0.276508,0
+intervention:curcumin,Curcumin,val,7,surrogate:creatinine,creatinine,0.265159,0
+intervention:curcumin,Curcumin,val,8,surrogate:met,MET,0.240313,2
+intervention:curcumin,Curcumin,val,9,surrogate:pam,PAM,0.239286,0
+intervention:curcumin,Curcumin,val,10,surrogate:pten,PTEN,0.23628,2
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,1,surrogate:sasp_panel,SASP panel,0.325904,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,2,surrogate:nt_probnp,NT-proBNP,0.324066,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,3,surrogate:hba1c,HbA1c,0.298779,2
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,4,surrogate:pam,PAM,0.293929,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,5,surrogate:il6,IL6,0.268398,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,6,surrogate:p16ink4a_expression,p16INK4a expression,0.260692,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,7,surrogate:igf_1,IGF-1,0.248643,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,8,surrogate:pten,PTEN,0.22179,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,9,surrogate:met,MET,0.21971,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,val,10,surrogate:crp,CRP,0.209197,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,1,surrogate:sasp_panel,SASP panel,0.367706,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,2,surrogate:hba1c,HbA1c,0.349775,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,3,surrogate:igf_1,IGF-1,0.288827,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,4,surrogate:nt_probnp,NT-proBNP,0.260497,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,5,surrogate:met,MET,0.247256,2
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,6,surrogate:lean_mass,lean mass,0.235997,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,7,surrogate:il6,IL6,0.228017,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,8,surrogate:p16ink4a_expression,p16INK4a expression,0.219691,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,9,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.183448,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,val,10,surrogate:pam,PAM,0.182108,0
+intervention:mitoq,Mitoq,val,1,surrogate:sasp_panel,SASP panel,0.381118,1
+intervention:mitoq,Mitoq,val,2,surrogate:hba1c,HbA1c,0.374644,0
+intervention:mitoq,Mitoq,val,3,surrogate:il6,IL6,0.315906,1
+intervention:mitoq,Mitoq,val,4,surrogate:triglycerides,triglycerides,0.309567,0
+intervention:mitoq,Mitoq,val,5,surrogate:p16ink4a_expression,p16INK4a expression,0.304746,1
+intervention:mitoq,Mitoq,val,6,surrogate:pten,PTEN,0.294545,0
+intervention:mitoq,Mitoq,val,7,surrogate:kdr,KDR,0.272826,0
+intervention:mitoq,Mitoq,val,8,surrogate:creatinine,creatinine,0.269043,0
+intervention:mitoq,Mitoq,val,9,surrogate:met,MET,0.263754,0
+intervention:mitoq,Mitoq,val,10,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.26166,1
+intervention:nad_therapeutics,Nad+ Therapeutics,val,1,surrogate:sasp_panel,SASP panel,0.408965,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,2,surrogate:hba1c,HbA1c,0.370709,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,3,surrogate:il6,IL6,0.316271,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,4,surrogate:p16ink4a_expression,p16INK4a expression,0.315904,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.311839,1
+intervention:nad_therapeutics,Nad+ Therapeutics,val,6,surrogate:creatinine,creatinine,0.287102,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,7,surrogate:triglycerides,triglycerides,0.279863,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,8,surrogate:met,MET,0.268687,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,9,surrogate:pam,PAM,0.267795,0
+intervention:nad_therapeutics,Nad+ Therapeutics,val,10,surrogate:nt_probnp,NT-proBNP,0.265363,0
+intervention:nmn,Nmn,val,1,surrogate:sasp_panel,SASP panel,0.332853,0
+intervention:nmn,Nmn,val,2,surrogate:hba1c,HbA1c,0.297401,0
+intervention:nmn,Nmn,val,3,surrogate:il6,IL6,0.239821,0
+intervention:nmn,Nmn,val,4,surrogate:triglycerides,triglycerides,0.236336,0
+intervention:nmn,Nmn,val,5,surrogate:p16ink4a_expression,p16INK4a expression,0.223618,0
+intervention:nmn,Nmn,val,6,surrogate:nt_probnp,NT-proBNP,0.210931,0
+intervention:nmn,Nmn,val,7,surrogate:met,MET,0.198278,2
+intervention:nmn,Nmn,val,8,surrogate:igf_1,IGF-1,0.196717,0
+intervention:nmn,Nmn,val,9,surrogate:creatinine,creatinine,0.176203,0
+intervention:nmn,Nmn,val,10,surrogate:pten,PTEN,0.160123,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,1,surrogate:hba1c,HbA1c,0.31492,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,2,surrogate:sasp_panel,SASP panel,0.277503,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,3,surrogate:nt_probnp,NT-proBNP,0.259984,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,4,surrogate:creatinine,creatinine,0.258668,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,5,surrogate:il6,IL6,0.251286,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,6,surrogate:met,MET,0.238651,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,7,surrogate:pten,PTEN,0.231479,2
+intervention:rapamycin_analogs,Rapamycin Analogs,val,8,surrogate:pam,PAM,0.220685,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,9,surrogate:triglycerides,triglycerides,0.203313,0
+intervention:rapamycin_analogs,Rapamycin Analogs,val,10,surrogate:p16ink4a_expression,p16INK4a expression,0.192982,0
+intervention:ras_inhibitors,Ras Inhibitors,val,1,surrogate:igf_1,IGF-1,0.391592,0
+intervention:ras_inhibitors,Ras Inhibitors,val,2,surrogate:sasp_panel,SASP panel,0.370742,0
+intervention:ras_inhibitors,Ras Inhibitors,val,3,surrogate:hba1c,HbA1c,0.339128,0
+intervention:ras_inhibitors,Ras Inhibitors,val,4,surrogate:nt_probnp,NT-proBNP,0.289158,0
+intervention:ras_inhibitors,Ras Inhibitors,val,5,surrogate:il6,IL6,0.279033,0
+intervention:ras_inhibitors,Ras Inhibitors,val,6,surrogate:met,MET,0.254824,2
+intervention:ras_inhibitors,Ras Inhibitors,val,7,surrogate:lean_mass,lean mass,0.252775,0
+intervention:ras_inhibitors,Ras Inhibitors,val,8,surrogate:p16ink4a_expression,p16INK4a expression,0.249198,0
+intervention:ras_inhibitors,Ras Inhibitors,val,9,surrogate:pam,PAM,0.246078,0
+intervention:ras_inhibitors,Ras Inhibitors,val,10,surrogate:crp,CRP,0.239633,0
+intervention:semaglutide,Semaglutide,val,1,surrogate:hba1c,HbA1c,0.361115,3
+intervention:semaglutide,Semaglutide,val,2,surrogate:sasp_panel,SASP panel,0.287342,0
+intervention:semaglutide,Semaglutide,val,3,surrogate:creatinine,creatinine,0.262063,2
+intervention:semaglutide,Semaglutide,val,4,surrogate:il6,IL6,0.243151,0
+intervention:semaglutide,Semaglutide,val,5,surrogate:met,MET,0.241467,0
+intervention:semaglutide,Semaglutide,val,6,surrogate:nt_probnp,NT-proBNP,0.24072,0
+intervention:semaglutide,Semaglutide,val,7,surrogate:igf_1,IGF-1,0.221279,0
+intervention:semaglutide,Semaglutide,val,8,surrogate:pten,PTEN,0.216914,0
+intervention:semaglutide,Semaglutide,val,9,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.200645,0
+intervention:semaglutide,Semaglutide,val,10,surrogate:p16ink4a_expression,p16INK4a expression,0.190682,0
+intervention:senolytic_strategies,Senolytic Strategies,val,1,surrogate:sasp_panel,SASP panel,0.382785,3
+intervention:senolytic_strategies,Senolytic Strategies,val,2,surrogate:triglycerides,triglycerides,0.331332,0
+intervention:senolytic_strategies,Senolytic Strategies,val,3,surrogate:hba1c,HbA1c,0.329508,0
+intervention:senolytic_strategies,Senolytic Strategies,val,4,surrogate:p16ink4a_expression,p16INK4a expression,0.275853,3
+intervention:senolytic_strategies,Senolytic Strategies,val,5,surrogate:il6,IL6,0.259442,1
+intervention:senolytic_strategies,Senolytic Strategies,val,6,surrogate:met,MET,0.259095,0
+intervention:senolytic_strategies,Senolytic Strategies,val,7,surrogate:pten,PTEN,0.242431,0
+intervention:senolytic_strategies,Senolytic Strategies,val,8,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.239907,0
+intervention:senolytic_strategies,Senolytic Strategies,val,9,surrogate:cystatin_c,cystatin C,0.21953,0
+intervention:senolytic_strategies,Senolytic Strategies,val,10,surrogate:creatinine,creatinine,0.217911,0
+intervention:spermidine,Spermidine,val,1,surrogate:il6,IL6,0.17894,0
+intervention:spermidine,Spermidine,val,2,surrogate:p16ink4a_expression,p16INK4a expression,0.170245,0
+intervention:spermidine,Spermidine,val,3,surrogate:hba1c,HbA1c,0.168009,0
+intervention:spermidine,Spermidine,val,4,surrogate:sasp_panel,SASP panel,0.16651,0
+intervention:spermidine,Spermidine,val,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.159826,2
+intervention:spermidine,Spermidine,val,6,surrogate:kdr,KDR,0.139999,0
+intervention:spermidine,Spermidine,val,7,surrogate:gpnmb,GPNMB,0.139111,0
+intervention:spermidine,Spermidine,val,8,surrogate:triglycerides,triglycerides,0.138755,0
+intervention:spermidine,Spermidine,val,9,surrogate:fasting_insulin,fasting insulin,0.136397,0
+intervention:spermidine,Spermidine,val,10,surrogate:met,MET,0.134639,0
+intervention:urolithin_a,Urolithin A,val,1,surrogate:hba1c,HbA1c,0.431543,0
+intervention:urolithin_a,Urolithin A,val,2,surrogate:sasp_panel,SASP panel,0.381055,0
+intervention:urolithin_a,Urolithin A,val,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.323467,1
+intervention:urolithin_a,Urolithin A,val,4,surrogate:met,MET,0.316444,0
+intervention:urolithin_a,Urolithin A,val,5,surrogate:triglycerides,triglycerides,0.294065,0
+intervention:urolithin_a,Urolithin A,val,6,surrogate:nt_probnp,NT-proBNP,0.293741,0
+intervention:urolithin_a,Urolithin A,val,7,surrogate:igf_1,IGF-1,0.287339,0
+intervention:urolithin_a,Urolithin A,val,8,surrogate:creatinine,creatinine,0.274529,0
+intervention:urolithin_a,Urolithin A,val,9,surrogate:il6,IL6,0.257994,0
+intervention:urolithin_a,Urolithin A,val,10,surrogate:p16ink4a_expression,p16INK4a expression,0.245804,0

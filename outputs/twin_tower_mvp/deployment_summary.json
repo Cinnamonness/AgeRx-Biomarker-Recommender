@@ -1,0 +1,14 @@
+{
+  "selected_encoder": "MolFormer",
+  "selected_preset": "molformer",
+  "selected_fold": 1,
+  "selection_rule": "highest val_mrr@10 among completed 30-epoch CV folds",
+  "predict_top_k_default": 3,
+  "configured_max_epochs": 30,
+  "early_stopping_patience": 5,
+  "actual_epochs_by_fold": {
+    "fold_0": 11,
+    "fold_1": 16,
+    "fold_2": 18
+  }
+}

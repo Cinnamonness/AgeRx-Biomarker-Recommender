@@ -1,364 +1,313 @@
 # LongevMarker AI
 
-LongevMarker AI is an MVP recommender system for **ranking surrogate biomarkers for chemical longevity interventions**.
+LongevMarker AI is an MVP Twin Tower recommender for **ranking surrogate biomarkers for chemical longevity interventions**.
 
-The project goal is simple:
-- take a chemical intervention
-- use its molecular structure
-- compare it against biomarker semantic descriptions
-- return a ranked biomarker logit vector
+The active model does three things:
+- reads the intervention-surrogate supervision from `data/processed/curated_biomarkers.csv`
+- encodes the intervention through a pretrained **chemical structure encoder**
+- scores all biomarker candidates and returns a **ranked logit vector**
 
-## Context
+This repo keeps the table-building and preprocessing layer unchanged. The work here is only the **model layer**, benchmarking, saved checkpoints, and documentation.
 
-Longevity studies are slow and expensive.
-A practical MVP is not to prove causality, but to recommend **which biomarkers are worth tracking** for a given intervention.
+## Problem
 
-This repo now does that with a **chemical-structure to biomarker-text Twin Tower model**.
+Longevity trials are long and expensive.
+A practical MVP is not to prove causality or surrogate validity from scratch, but to answer a simpler question:
 
-## What was not changed
+**given a chemical intervention, which surrogate biomarkers are the best candidates to track?**
 
-The following parts were left untouched:
-- all tables in `data/`
-- all table-building and preprocessing logic
-- the existing processing scripts that generate training tables
+That is the task the model solves.
 
-The source-of-truth table remains:
+## Data Flow
+
+The model now builds its runtime training/evaluation objects directly from existing processed tables.
+
+### 1. Main supervision table
 - `data/processed/curated_biomarkers.csv`
 
-## What the active model does
+This is the main table.
+Each row is one `intervention -> surrogate` link with:
+- `mechanism_hint`
+- `surrogate_category`
+- `pathway`
+- `hallmark`
+- `evidence_score`
+- `surrogate_confidence`
+- `literature_support`
 
-Input:
-- a chemical intervention represented by molecular structure
-- usually taken from `data/embedding/molecular_interventions.csv`
-- or provided manually as a structure string for inference
+Current scale:
+- `158` rows
+- `42` unique interventions
+- `41` unique biomarkers/surrogates
 
-Output:
-- a **vector of biomarker logits** over the full biomarker candidate set
-- the same vector **ranked descending by score**
-- top-k biomarker recommendations
+### 2. Structure source
+- `data/processed/compound_registry.csv`
+- `data/processed/compound_components.csv`
+- `data/seed_interventions.csv`
 
-So yes, the model output is:
-- one logit per biomarker candidate
-- then a ranked biomarker list built from those logits
+These are used only to resolve chemical inputs for the left tower.
+If an intervention is not available as a direct exact molecule in the registry, the model uses one of these fallbacks without changing any table:
+- exact registry molecule
+- component molecule
+- prototype average for class-level interventions
+- supplemental local structure mapping inside the model layer
+- final text fallback only if no structure proxy exists
 
-## Which tables the model uses
+### 3. Runtime objects built by the model
+At train time the model constructs:
+- query rows for interventions
+- candidate rows for biomarkers
+- qrels-like relevance rows
+- triplets for hard-negative training
+- fold assignments for cross-validation
 
-### Main semantic source
-- `data/processed/curated_biomarkers.csv`
+These are saved in:
+- `outputs/twin_tower_mvp/runtime_queries.csv`
+- `outputs/twin_tower_mvp/runtime_biomarker_candidates.csv`
+- `outputs/twin_tower_mvp/runtime_relations.csv`
+- `outputs/twin_tower_mvp/runtime_triplets.csv`
+- `outputs/twin_tower_mvp/fold_assignments.csv`
+- `outputs/twin_tower_mvp/structure_resolution.csv`
 
-### Existing generated embedding tables
-The model consumes these already-prepared files and does not modify them:
-- `data/embedding/molecular_interventions.csv`
-- `data/embedding/biomarker_semantic_texts.csv`
-- `data/embedding/molecular_biomarker_semantic_qrels.csv`
-- `data/embedding/molecule_to_biomarker_semantic_triplets.csv`
+## Model Architecture
 
-### Optional simpler biomarker table
-- `data/embedding/surrogate_texts.csv`
-
-## Architecture
-
-The active model is a **Twin Tower recommender**.
+The model is a **Twin Tower recommender**.
 
 ### Left tower: intervention chemistry
-The left tower consumes molecular structure for the intervention.
+Input:
+- molecular structure for the intervention
+- usually SMILES
+- for `SELFormer`, SELFIES
 
-Supported chemical encoders:
+Supported encoders:
 - `ChemBERTa`
 - `MolFormer`
 - `SELFormer`
 
-Representations:
-- `ChemBERTa`: `canonical_smiles`
-- `MolFormer`: `canonical_smiles`
-- `SELFormer`: `selfies_sequence`
+The left tower uses a pretrained chemical encoder and **unfreezes the last transformer layer**.
+Everything else remains frozen.
 
-The left side is responsible for encoding the intervention as chemistry, not as free text.
-
-### Right tower: biomarker semantics
-The right tower consumes biomarker text from:
-- `biomarker_semantic_texts.csv`
-
-Each candidate text already contains rich semantic context such as:
+### Right tower: biomarker semantic text
+Each biomarker candidate is turned into a semantic profile containing:
 - biomarker name
-- biomarker category
+- category
 - pathways
 - hallmarks
 - linked interventions
-- mechanism themes
-- short evidence-oriented description
+- mechanism hints
+- evidence aggregates
+- short literature-derived context
 
-The right side is the final recommendation space.
-At inference time the model scores the molecule embedding against all biomarker candidate embeddings.
-
-### Backbone strategy
-The model uses:
-- a frozen pretrained chemical encoder on the left
-- a TF-IDF text encoder on the right
-- trainable projection heads on both sides
-
-This keeps the MVP realistic:
-- no table changes
-- real molecular encoders are used
-- training stays lightweight enough for a hackathon-scale dataset
+This text is encoded with a lightweight TF-IDF representation.
 
 ### Projection heads
 After base features are computed:
-- molecular features go through a trainable query projection tower
-- biomarker text features go through a trainable candidate projection tower
+- the chemical representation goes through a trainable `query_tower`
+- the biomarker text representation goes through a trainable `candidate_tower`
 
-Each tower applies:
-- linear layer
-- layer norm
-- GELU
-- dropout
-- final linear layer
-- L2 normalization
+Each tower is:
+- `Linear`
+- `LayerNorm`
+- `GELU`
+- `Dropout`
+- `Linear`
+- `L2 normalize`
 
 ### Scoring
-The final score is a temperature-scaled dot product between:
-- projected intervention embedding
-- projected biomarker embedding
+The final score is a temperature-scaled dot product:
+- `score(intervention, biomarker) = q_emb dot b_emb / temperature`
 
-For one intervention query, the model returns:
-- `logits shape = [number_of_biomarker_candidates]`
+For one intervention query the output is:
+- one logit per biomarker candidate
+- here: a vector of length `41`
 
-For the current saved MVP run:
-- `logits shape = [19]`
+Then logits are sorted descending.
+The user-facing prediction is **top-3 biomarkers**.
 
-Then logits are sorted descending to produce the final ranking.
+## What `relevance` Means
 
-## How supervision works
+`Relevance` is an evidence-weighted proxy label built from:
+- `evidence_score`
+- `surrogate_confidence`
+- `literature_support`
 
-The model is trained directly on the intervention-surrogate relation that already exists in the generated molecular tables.
+This is used only as ranking supervision.
+It should be interpreted as:
+- stronger or weaker curated support for the intervention-surrogate association
+- not as a clinical effect size
+
+## Training Objective
+
+The model uses two supervision signals.
 
 ### 1. Multi-label BCE over biomarker candidates
-From:
-- `molecular_biomarker_semantic_qrels.csv`
+For each intervention:
+- true linked biomarkers are positives
+- other biomarkers are negatives
+- positive pairs are weighted by the continuous proxy strength described above
 
-For each intervention query:
-- relevant biomarkers are positives
-- the rest are negatives
-- relevance values weight the positive supervision
+This is the main loss that teaches the model to emit a biomarker logit vector.
 
-This is the main loss that teaches the model to output a biomarker logit vector.
+### 2. Triplet loss
+Hard negatives are generated from biomarkers with overlapping:
+- category
+- hallmark
 
-### 2. Hard-negative triplet loss
-From:
-- `molecule_to_biomarker_semantic_triplets.csv`
+This improves ranking among confusing candidates.
 
-For each anchor intervention:
-- one correct biomarker semantic candidate is positive
-- one hard negative biomarker semantic candidate is negative
+## Cross-Validation
 
-This sharpens ranking around confusing biomarker candidates.
+The current active setup uses **3-fold cross-validation** over interventions.
 
-### Final training objective
-The current model uses:
-- weighted BCE loss over the full biomarker candidate set
-- triplet margin loss over hard negatives
+For each fold:
+- one fold is `test`
+- the next fold is `val`
+- the remaining fold(s) are `train`
 
-So this is a **chemical-to-biomarker retrieval model with ranking-aware supervision**.
+Saved CV results:
+- `outputs/twin_tower_mvp/cross_validation_folds.csv`
+- `outputs/twin_tower_mvp/cross_validation_summary.csv`
 
-## Chemical encoder comparison
+## Chemical Encoder Benchmark
 
-Different chemical encoders were actually tested in the new Twin Tower.
-
-Benchmark file:
+Benchmark summary:
 - `outputs/encoder_benchmark/encoder_comparison.csv`
 
-Compared encoders:
-- `ChemBERTa`
+Current rigorous run on the updated dataset:
+
+- `MolFormer` with `max_epochs=30`, `patience=5`: `test MRR@10 mean = 0.686035`, `Recall@5 mean = 0.833333`, `nDCG@10 mean = 0.560440`
+
+Reference short-run comparisons from the earlier exploratory pass:
+- `ChemBERTa`: `test MRR@10 mean = 0.618944`, `Recall@5 mean = 0.833333`, `nDCG@10 mean = 0.490962`
+- `SELFormer`: `test MRR@10 mean = 0.414664`, `Recall@5 mean = 0.809524`, `nDCG@10 mean = 0.390678`
+
+Active winner:
 - `MolFormer`
-- `SELFormer`
 
-Benchmark results on the current dataset:
+Why `MolFormer` is active now:
+- best currently available long-run result
+- improved over the earlier quick benchmark
+- selected from completed `30`-epoch CV folds by validation quality
 
-- `ChemBERTa`: test `MRR@10 = 0.75`, `Recall@5 = 1.0`, `nDCG@10 = 0.596107`
-- `MolFormer`: test `MRR@10 = 0.75`, `Recall@5 = 1.0`, `nDCG@10 = 0.648394`
-- `SELFormer`: test `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.646759`
+## Active Production Checkpoint
 
-Current active MVP run is based on:
-- `SELFormer`
+Active output directory:
+- `outputs/twin_tower_mvp`
 
-Why it was selected:
-- best `test MRR@10`
-- full retrieval worked end-to-end on the current dataset
+Selected deployment checkpoint:
+- `outputs/twin_tower_mvp/final_model`
 
-## Active code
+Deployment metadata:
+- `outputs/twin_tower_mvp/deployment_summary.json`
 
-### Main model module
-- `src/longevmarker/twin_tower.py`
+Selection rule:
+- highest `val_mrr@10` among completed `30`-epoch MolFormer CV folds
 
-This file contains:
-- chemical encoder loading
-- TF-IDF biomarker text encoding
-- Twin Tower model
-- training loop
-- evaluation
-- prediction
+Selected fold:
+- `fold_1`
 
-### Benchmark module
-- `src/longevmarker/twin_tower_benchmark.py`
+Configured training regime:
+- max epochs: `30`
+- early stopping patience: `5`
+- actual epochs by fold: `11`, `16`, `18`
 
-### CLI entry points
-- `scripts/train_twin_tower.py`
-- `scripts/evaluate_twin_tower.py`
-- `scripts/predict_biomarkers.py`
-- `scripts/benchmark_chemical_encoders.py`
+Checkpoint metrics of the deployed fold:
+- train `MRR@10 = 0.952381`, `Recall@5 = 1.0`, `nDCG@10 = 0.82723`
+- val `MRR@10 = 0.725`, `Recall@5 = 0.928571`, `nDCG@10 = 0.57252`
+- test `MRR@10 = 0.61763`, `Recall@5 = 0.714286`, `nDCG@10 = 0.509728`
 
-## Processing code that remains untouched
+Cross-validated mean metrics for the active encoder family:
+- test `MRR@10 = 0.686035 ± 0.053085`
+- test `Recall@5 = 0.833333 ± 0.089087`
+- test `nDCG@10 = 0.560440 ± 0.067057`
 
-These stay in the repo as-is:
-- `scripts/build_literature_dataset.py`
-- `scripts/prepare_embedding_materials.py`
-- `scripts/fetch_compound_registry.py`
-- `scripts/prepare_molecular_embedding_materials.py`
-- `scripts/populate_selfies_sequences.py`
-- `src/longevmarker/dataset_builder.py`
-- `src/longevmarker/embedding_data.py`
-- `src/longevmarker/compound_registry.py`
-- `src/longevmarker/molecular_embedding_data.py`
-- `src/longevmarker/selfies_data.py`
-- related PubMed / PubTator / biomarker matcher code
+## What The Model Returns
 
-## How to run
+The prediction script returns:
+- `candidate_count`
+- the full hidden classifier space size
+- `class_to_biomarker` mapping
+- the ranked top-3 biomarkers with logits
 
-### 1. Make sure the existing embedding tables already exist
-If needed, regenerate them with the unchanged processing scripts:
+So yes, the model output is:
+- a **vector of biomarker logits**
+- then a **ranked top-3 recommendation list**
+
+Example current prediction for `Metformin` from the active MolFormer checkpoint:
+- `NAD+ NADH ratio`
+- `SASP panel`
+- `fasting glucose`
+
+Saved dictionaries:
+- `outputs/twin_tower_mvp/final_model/class_to_biomarker.json`
+- `outputs/twin_tower_mvp/final_model/biomarker_to_class.json`
+
+Saved weights:
+- `outputs/twin_tower_mvp/final_model/model.pt`
+- `outputs/twin_tower_mvp/final_model/query_tower_weights.pt`
+- `outputs/twin_tower_mvp/final_model/candidate_tower_weights.pt`
+
+## How To Run
+
+### Train one model with cross-validation and save the deployment checkpoint
+
+Example: active recommended path with `MolFormer`
 
 ```bash
-cd /longevmarker-ai
-python3 scripts/prepare_embedding_materials.py
-python3 scripts/prepare_molecular_embedding_materials.py
-python3 scripts/populate_selfies_sequences.py
-```
-
-### 2. Train one Twin Tower run
-Example: active recommended run with `SELFormer`
-
-```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/train_twin_tower.py \
-  --molecule-encoder selformer \
+cd longevmarker-ai
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=src python3 scripts/train_twin_tower.py \
   --output-dir outputs/twin_tower_mvp \
-  --device cpu
-```
-
-Example: train with `MolFormer`
-
-```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/train_twin_tower.py \
   --molecule-encoder molformer \
-  --output-dir outputs/twin_tower_molformer \
-  --device cpu
+  --device cpu \
+  --epochs 30 \
+  --early-stopping-patience 5 \
+  --num-folds 3 \
+  --predict-top-k 3 \
+  --unfreeze-last-n-layers 1
 ```
 
-Example: train with `ChemBERTa`
+### Benchmark all three chemical encoders
 
 ```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/train_twin_tower.py \
-  --molecule-encoder chemberta \
-  --output-dir outputs/twin_tower_chemberta \
-  --device cpu
-```
-
-### 3. Benchmark all three chemical encoders
-
-```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/benchmark_chemical_encoders.py \
+cd longevmarker-ai
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=src python3 scripts/benchmark_chemical_encoders.py \
   --output-dir outputs/encoder_benchmark \
+  --device cpu \
+  --epochs 30 \
+  --early-stopping-patience 5 \
+  --num-folds 3 \
+  --predict-top-k 3 \
+  --unfreeze-last-n-layers 1
+```
+
+### Evaluate the active deployment checkpoint
+
+```bash
+cd longevmarker-ai
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=src python3 scripts/evaluate_twin_tower.py \
+  --model-dir outputs/twin_tower_mvp/final_model \
   --device cpu
 ```
 
-### 4. Evaluate the active model
+### Predict top-3 biomarkers for a known intervention
 
 ```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/evaluate_twin_tower.py \
-  --model-dir outputs/twin_tower_mvp \
-  --device cpu
-```
-
-### 5. Predict biomarkers for an existing intervention in the saved query table
-
-```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/predict_biomarkers.py \
-  --model-dir outputs/twin_tower_mvp \
+cd longevmarker-ai
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=src python3 scripts/predict_biomarkers.py \
+  --model-dir outputs/twin_tower_mvp/final_model \
   --intervention Metformin \
-  --top-k 10 \
+  --top-k 3 \
   --device cpu
 ```
 
-### 6. Predict biomarkers for a custom structure
-If you pass `--structure`, the structure must match the active encoder representation.
-
-Examples:
-- for `ChemBERTa` or `MolFormer`: pass SMILES
-- for `SELFormer`: pass SELFIES
+### Predict for a custom structure
 
 ```bash
-cd /longevmarker-ai
-PYTHONPATH=src python3 scripts/predict_biomarkers.py \
-  --model-dir outputs/twin_tower_mvp \
-  --structure "[C][N][Branch1][C][C][C][=Branch1][C][=N][N][=C][Branch1][C][N][N]" \
-  --top-k 10 \
+cd longevmarker-ai
+HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 PYTHONPATH=src python3 scripts/predict_biomarkers.py \
+  --model-dir outputs/twin_tower_mvp/final_model \
+  --structure "CN(C)C(=N)N=C(N)N" \
+  --query-text "Intervention profile: custom AMPK-like compound." \
+  --top-k 3 \
   --device cpu
 ```
-
-## What prediction returns
-
-The prediction script computes:
-- one logit per biomarker candidate
-- then ranks all candidates descending by logit
-
-Printed output includes:
-- rank
-- biomarker name
-- logit
-- biomarker category
-- pathways
-- hallmarks
-
-Example current active run for `Metformin` top-5:
-- `fasting insulin`
-- `IL6`
-- `CRP`
-- `GDF15`
-- `triglycerides`
-
-## Saved model artifacts
-
-The active model run in `outputs/twin_tower_mvp` contains:
-- `model.pt`
-- `config.json`
-- `text_vectorizer.pkl`
-- `query_base_features.npy`
-- `candidate_base_features.npy`
-- `query_rows.csv`
-- `biomarker_candidates.csv`
-- `training_history.csv`
-- `metrics.csv`
-- `rankings_train.csv`
-- `rankings_val.csv`
-- `rankings_test.csv`
-- `eval_metrics.csv`
-- `eval_rankings_train.csv`
-- `eval_rankings_val.csv`
-- `eval_rankings_test.csv`
-
-## Current active MVP run
-
-The cleaned repo now keeps:
-- one active model run in `outputs/twin_tower_mvp`
-- one benchmark directory in `outputs/encoder_benchmark`
-
-Current active run metrics (`SELFormer`):
-- train `MRR@10 = 0.84375`, `Recall@5 = 1.0`, `nDCG@10 = 0.680612`
-- val `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.571253`
-- test `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.646759`
-

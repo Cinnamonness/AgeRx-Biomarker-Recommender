@@ -1,0 +1,141 @@
+query_id,intervention,split,rank,candidate_id,surrogate,score,relevance
+intervention:acarbose,Acarbose,train,1,surrogate:hba1c,HbA1c,0.409222,1
+intervention:acarbose,Acarbose,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.381833,1
+intervention:acarbose,Acarbose,train,3,surrogate:sasp_panel,SASP panel,0.369902,2
+intervention:acarbose,Acarbose,train,4,surrogate:homa_ir,HOMA-IR,0.343632,3
+intervention:acarbose,Acarbose,train,5,surrogate:met,MET,0.319259,0
+intervention:acarbose,Acarbose,train,6,surrogate:il6,IL6,0.303861,0
+intervention:acarbose,Acarbose,train,7,surrogate:igf_1,IGF-1,0.302338,0
+intervention:acarbose,Acarbose,train,8,surrogate:telomere_length,telomere length,0.294572,0
+intervention:acarbose,Acarbose,train,9,surrogate:creatinine,creatinine,0.286679,0
+intervention:acarbose,Acarbose,train,10,surrogate:fasting_glucose,fasting glucose,0.27631,1
+intervention:betulinic_acid,Betulinic Acid,train,1,surrogate:hba1c,HbA1c,0.297967,0
+intervention:betulinic_acid,Betulinic Acid,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.294317,0
+intervention:betulinic_acid,Betulinic Acid,train,3,surrogate:homa_ir,HOMA-IR,0.287733,0
+intervention:betulinic_acid,Betulinic Acid,train,4,surrogate:sasp_panel,SASP panel,0.283598,0
+intervention:betulinic_acid,Betulinic Acid,train,5,surrogate:met,MET,0.271262,0
+intervention:betulinic_acid,Betulinic Acid,train,6,surrogate:parp1,PARP1,0.265245,0
+intervention:betulinic_acid,Betulinic Acid,train,7,surrogate:il6,IL6,0.264657,0
+intervention:betulinic_acid,Betulinic Acid,train,8,surrogate:igf_1,IGF-1,0.241949,2
+intervention:betulinic_acid,Betulinic Acid,train,9,surrogate:creatinine,creatinine,0.240215,0
+intervention:betulinic_acid,Betulinic Acid,train,10,surrogate:telomere_length,telomere length,0.19252,0
+intervention:curcumin,Curcumin,train,1,surrogate:met,MET,0.357914,2
+intervention:curcumin,Curcumin,train,2,surrogate:hba1c,HbA1c,0.35471,0
+intervention:curcumin,Curcumin,train,3,surrogate:sasp_panel,SASP panel,0.315018,2
+intervention:curcumin,Curcumin,train,4,surrogate:creatinine,creatinine,0.297275,0
+intervention:curcumin,Curcumin,train,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.293611,0
+intervention:curcumin,Curcumin,train,6,surrogate:homa_ir,HOMA-IR,0.291573,0
+intervention:curcumin,Curcumin,train,7,surrogate:parp1,PARP1,0.280857,0
+intervention:curcumin,Curcumin,train,8,surrogate:il6,IL6,0.279393,3
+intervention:curcumin,Curcumin,train,9,surrogate:pten,PTEN,0.256863,2
+intervention:curcumin,Curcumin,train,10,surrogate:telomere_length,telomere length,0.219403,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,1,surrogate:hba1c,HbA1c,0.309442,2
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.257078,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,3,surrogate:met,MET,0.249118,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,4,surrogate:fasting_glucose,fasting glucose,0.221964,1
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,5,surrogate:sasp_panel,SASP panel,0.215477,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,6,surrogate:creatinine,creatinine,0.213956,2
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,7,surrogate:il6,IL6,0.202215,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,8,surrogate:telomere_length,telomere length,0.183241,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,9,surrogate:mcp_1,MCP-1,0.168717,0
+intervention:dpp_4_inhibitors,Dpp-4 Inhibitors,train,10,surrogate:homa_ir,HOMA-IR,0.168413,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,1,surrogate:met,MET,0.308907,2
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,2,surrogate:hba1c,HbA1c,0.289675,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,3,surrogate:creatinine,creatinine,0.253778,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,4,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.225186,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,5,surrogate:cd3e,CD3E,0.185667,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,6,surrogate:homa_ir,HOMA-IR,0.175539,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,7,surrogate:il6,IL6,0.163465,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,8,surrogate:sasp_panel,SASP panel,0.162156,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,9,surrogate:fasting_glucose,fasting glucose,0.155183,0
+intervention:immune_checkpoint_inhibitors,Immune Checkpoint Inhibitors,train,10,surrogate:gpnmb,GPNMB,0.153763,0
+intervention:mitoq,Mitoq,train,1,surrogate:hba1c,HbA1c,0.402909,0
+intervention:mitoq,Mitoq,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.395095,1
+intervention:mitoq,Mitoq,train,3,surrogate:sasp_panel,SASP panel,0.385793,1
+intervention:mitoq,Mitoq,train,4,surrogate:telomere_length,telomere length,0.365955,1
+intervention:mitoq,Mitoq,train,5,surrogate:il6,IL6,0.361059,1
+intervention:mitoq,Mitoq,train,6,surrogate:met,MET,0.341431,0
+intervention:mitoq,Mitoq,train,7,surrogate:parp1,PARP1,0.339657,1
+intervention:mitoq,Mitoq,train,8,surrogate:igf_1,IGF-1,0.323165,0
+intervention:mitoq,Mitoq,train,9,surrogate:homa_ir,HOMA-IR,0.312348,0
+intervention:mitoq,Mitoq,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.302336,1
+intervention:nad_therapeutics,Nad+ Therapeutics,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.401737,1
+intervention:nad_therapeutics,Nad+ Therapeutics,train,2,surrogate:hba1c,HbA1c,0.390722,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,3,surrogate:creatinine,creatinine,0.355725,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,4,surrogate:met,MET,0.347771,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,5,surrogate:parp1,PARP1,0.2904,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,6,surrogate:homa_ir,HOMA-IR,0.288802,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,7,surrogate:sasp_panel,SASP panel,0.287493,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,8,surrogate:telomere_length,telomere length,0.281845,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,9,surrogate:fasting_glucose,fasting glucose,0.265418,0
+intervention:nad_therapeutics,Nad+ Therapeutics,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.243197,0
+intervention:nmn,Nmn,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.406563,3
+intervention:nmn,Nmn,train,2,surrogate:hba1c,HbA1c,0.400437,0
+intervention:nmn,Nmn,train,3,surrogate:met,MET,0.341765,2
+intervention:nmn,Nmn,train,4,surrogate:creatinine,creatinine,0.333913,0
+intervention:nmn,Nmn,train,5,surrogate:homa_ir,HOMA-IR,0.33159,3
+intervention:nmn,Nmn,train,6,surrogate:parp1,PARP1,0.315916,1
+intervention:nmn,Nmn,train,7,surrogate:sasp_panel,SASP panel,0.303593,0
+intervention:nmn,Nmn,train,8,surrogate:fasting_glucose,fasting glucose,0.260803,0
+intervention:nmn,Nmn,train,9,surrogate:lean_mass,lean mass,0.255334,0
+intervention:nmn,Nmn,train,10,surrogate:il6,IL6,0.245606,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,1,surrogate:hba1c,HbA1c,0.318323,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,2,surrogate:met,MET,0.284565,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,3,surrogate:fasting_glucose,fasting glucose,0.261468,1
+intervention:rapamycin_analogs,Rapamycin Analogs,train,4,surrogate:sasp_panel,SASP panel,0.25646,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.255592,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,6,surrogate:igf_1,IGF-1,0.242114,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,7,surrogate:creatinine,creatinine,0.227637,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,8,surrogate:gpnmb,GPNMB,0.224293,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,9,surrogate:il6,IL6,0.211579,0
+intervention:rapamycin_analogs,Rapamycin Analogs,train,10,surrogate:homa_ir,HOMA-IR,0.205563,0
+intervention:ras_inhibitors,Ras Inhibitors,train,1,surrogate:creatinine,creatinine,0.348671,1
+intervention:ras_inhibitors,Ras Inhibitors,train,2,surrogate:met,MET,0.345476,2
+intervention:ras_inhibitors,Ras Inhibitors,train,3,surrogate:hba1c,HbA1c,0.341729,0
+intervention:ras_inhibitors,Ras Inhibitors,train,4,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.23708,0
+intervention:ras_inhibitors,Ras Inhibitors,train,5,surrogate:homa_ir,HOMA-IR,0.23,0
+intervention:ras_inhibitors,Ras Inhibitors,train,6,surrogate:sasp_panel,SASP panel,0.226202,0
+intervention:ras_inhibitors,Ras Inhibitors,train,7,surrogate:il6,IL6,0.201568,0
+intervention:ras_inhibitors,Ras Inhibitors,train,8,surrogate:telomere_length,telomere length,0.198943,0
+intervention:ras_inhibitors,Ras Inhibitors,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.175545,0
+intervention:ras_inhibitors,Ras Inhibitors,train,10,surrogate:fasting_glucose,fasting glucose,0.157933,0
+intervention:semaglutide,Semaglutide,train,1,surrogate:hba1c,HbA1c,0.278487,3
+intervention:semaglutide,Semaglutide,train,2,surrogate:creatinine,creatinine,0.269281,2
+intervention:semaglutide,Semaglutide,train,3,surrogate:sasp_panel,SASP panel,0.241918,0
+intervention:semaglutide,Semaglutide,train,4,surrogate:met,MET,0.18322,0
+intervention:semaglutide,Semaglutide,train,5,surrogate:homa_ir,HOMA-IR,0.175841,0
+intervention:semaglutide,Semaglutide,train,6,surrogate:il6,IL6,0.161462,0
+intervention:semaglutide,Semaglutide,train,7,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.156184,0
+intervention:semaglutide,Semaglutide,train,8,surrogate:lean_mass,lean mass,0.153707,3
+intervention:semaglutide,Semaglutide,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.143657,0
+intervention:semaglutide,Semaglutide,train,10,surrogate:parp1,PARP1,0.141367,0
+intervention:senolytic_strategies,Senolytic Strategies,train,1,surrogate:sasp_panel,SASP panel,0.418541,3
+intervention:senolytic_strategies,Senolytic Strategies,train,2,surrogate:hba1c,HbA1c,0.362537,0
+intervention:senolytic_strategies,Senolytic Strategies,train,3,surrogate:il6,IL6,0.337656,1
+intervention:senolytic_strategies,Senolytic Strategies,train,4,surrogate:creatinine,creatinine,0.298486,0
+intervention:senolytic_strategies,Senolytic Strategies,train,5,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.283675,0
+intervention:senolytic_strategies,Senolytic Strategies,train,6,surrogate:met,MET,0.276347,0
+intervention:senolytic_strategies,Senolytic Strategies,train,7,surrogate:p16ink4a_expression,p16INK4a expression,0.272534,3
+intervention:senolytic_strategies,Senolytic Strategies,train,8,surrogate:homa_ir,HOMA-IR,0.247758,0
+intervention:senolytic_strategies,Senolytic Strategies,train,9,surrogate:fasting_glucose,fasting glucose,0.244284,0
+intervention:senolytic_strategies,Senolytic Strategies,train,10,surrogate:telomere_length,telomere length,0.210506,0
+intervention:spermidine,Spermidine,train,1,surrogate:hba1c,HbA1c,0.365139,0
+intervention:spermidine,Spermidine,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.358632,2
+intervention:spermidine,Spermidine,train,3,surrogate:igf_1,IGF-1,0.329659,2
+intervention:spermidine,Spermidine,train,4,surrogate:il6,IL6,0.319157,0
+intervention:spermidine,Spermidine,train,5,surrogate:sasp_panel,SASP panel,0.317392,0
+intervention:spermidine,Spermidine,train,6,surrogate:telomere_length,telomere length,0.307809,1
+intervention:spermidine,Spermidine,train,7,surrogate:met,MET,0.301812,0
+intervention:spermidine,Spermidine,train,8,surrogate:homa_ir,HOMA-IR,0.298797,0
+intervention:spermidine,Spermidine,train,9,surrogate:creatinine,creatinine,0.295588,0
+intervention:spermidine,Spermidine,train,10,surrogate:parp1,PARP1,0.275308,0
+intervention:urolithin_a,Urolithin A,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.452817,1
+intervention:urolithin_a,Urolithin A,train,2,surrogate:hba1c,HbA1c,0.414924,0
+intervention:urolithin_a,Urolithin A,train,3,surrogate:parp1,PARP1,0.365539,0
+intervention:urolithin_a,Urolithin A,train,4,surrogate:met,MET,0.360364,0
+intervention:urolithin_a,Urolithin A,train,5,surrogate:creatinine,creatinine,0.332677,0
+intervention:urolithin_a,Urolithin A,train,6,surrogate:fasting_glucose,fasting glucose,0.325585,0
+intervention:urolithin_a,Urolithin A,train,7,surrogate:homa_ir,HOMA-IR,0.320444,0
+intervention:urolithin_a,Urolithin A,train,8,surrogate:pten,PTEN,0.296944,1
+intervention:urolithin_a,Urolithin A,train,9,surrogate:lean_mass,lean mass,0.29659,0
+intervention:urolithin_a,Urolithin A,train,10,surrogate:sasp_panel,SASP panel,0.296124,0

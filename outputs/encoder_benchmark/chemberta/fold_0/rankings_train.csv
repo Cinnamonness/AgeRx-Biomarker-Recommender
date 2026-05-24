@@ -1,0 +1,141 @@
+query_id,intervention,split,rank,candidate_id,surrogate,score,relevance
+intervention:corticosterone,Corticosterone,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.294519,0
+intervention:corticosterone,Corticosterone,train,2,surrogate:sasp_panel,SASP panel,0.288865,0
+intervention:corticosterone,Corticosterone,train,3,surrogate:hba1c,HbA1c,0.284843,0
+intervention:corticosterone,Corticosterone,train,4,surrogate:il6,IL6,0.252164,2
+intervention:corticosterone,Corticosterone,train,5,surrogate:met,MET,0.238818,0
+intervention:corticosterone,Corticosterone,train,6,surrogate:creatinine,creatinine,0.223138,0
+intervention:corticosterone,Corticosterone,train,7,surrogate:lean_mass,lean mass,0.171226,0
+intervention:corticosterone,Corticosterone,train,8,surrogate:igf_1,IGF-1,0.145731,0
+intervention:corticosterone,Corticosterone,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.135948,0
+intervention:corticosterone,Corticosterone,train,10,surrogate:telomere_length,telomere length,0.134868,1
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,1,surrogate:sasp_panel,SASP panel,0.433429,3
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,2,surrogate:met,MET,0.399923,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,3,surrogate:il6,IL6,0.374719,1
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,4,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.372217,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,5,surrogate:hba1c,HbA1c,0.34219,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,6,surrogate:p16ink4a_expression,p16INK4a expression,0.303325,3
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,7,surrogate:igf_1,IGF-1,0.278764,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,8,surrogate:creatinine,creatinine,0.277319,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,9,surrogate:lean_mass,lean mass,0.269936,0
+intervention:dasatinib_quercetin,Dasatinib + Quercetin,train,10,surrogate:f2,F2,0.259145,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,1,surrogate:met,MET,0.391832,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,2,surrogate:sasp_panel,SASP panel,0.353696,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.350456,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,4,surrogate:hba1c,HbA1c,0.326631,1
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,5,surrogate:creatinine,creatinine,0.259251,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,6,surrogate:il6,IL6,0.247875,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,7,surrogate:lean_mass,lean mass,0.23281,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,8,surrogate:f2,F2,0.231553,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,9,surrogate:triglycerides,triglycerides,0.227369,0
+intervention:dual_glp_1_gip_receptor_agonists,Dual Glp-1/Gip Receptor Agonists,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.216385,0
+intervention:empagliflozin,Empagliflozin,train,1,surrogate:hba1c,HbA1c,0.345722,3
+intervention:empagliflozin,Empagliflozin,train,2,surrogate:met,MET,0.342701,0
+intervention:empagliflozin,Empagliflozin,train,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.280979,0
+intervention:empagliflozin,Empagliflozin,train,4,surrogate:sasp_panel,SASP panel,0.252048,0
+intervention:empagliflozin,Empagliflozin,train,5,surrogate:creatinine,creatinine,0.221327,3
+intervention:empagliflozin,Empagliflozin,train,6,surrogate:il6,IL6,0.19017,0
+intervention:empagliflozin,Empagliflozin,train,7,surrogate:lean_mass,lean mass,0.187487,0
+intervention:empagliflozin,Empagliflozin,train,8,surrogate:fasting_glucose,fasting glucose,0.143164,0
+intervention:empagliflozin,Empagliflozin,train,9,surrogate:triglycerides,triglycerides,0.130836,0
+intervention:empagliflozin,Empagliflozin,train,10,surrogate:igf_1,IGF-1,0.125499,0
+intervention:fisetin,Fisetin,train,1,surrogate:sasp_panel,SASP panel,0.458399,3
+intervention:fisetin,Fisetin,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.450728,1
+intervention:fisetin,Fisetin,train,3,surrogate:il6,IL6,0.392318,0
+intervention:fisetin,Fisetin,train,4,surrogate:met,MET,0.381845,0
+intervention:fisetin,Fisetin,train,5,surrogate:p16ink4a_expression,p16INK4a expression,0.33581,2
+intervention:fisetin,Fisetin,train,6,surrogate:hba1c,HbA1c,0.320755,0
+intervention:fisetin,Fisetin,train,7,surrogate:creatinine,creatinine,0.297287,0
+intervention:fisetin,Fisetin,train,8,surrogate:igf_1,IGF-1,0.295885,0
+intervention:fisetin,Fisetin,train,9,surrogate:lean_mass,lean mass,0.287379,0
+intervention:fisetin,Fisetin,train,10,surrogate:triglycerides,triglycerides,0.253653,0
+intervention:lanatoside_c,Lanatoside C,train,1,surrogate:sasp_panel,SASP panel,0.337301,1
+intervention:lanatoside_c,Lanatoside C,train,2,surrogate:met,MET,0.325692,0
+intervention:lanatoside_c,Lanatoside C,train,3,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.284098,0
+intervention:lanatoside_c,Lanatoside C,train,4,surrogate:il6,IL6,0.247444,1
+intervention:lanatoside_c,Lanatoside C,train,5,surrogate:hba1c,HbA1c,0.209732,0
+intervention:lanatoside_c,Lanatoside C,train,6,surrogate:fasting_glucose,fasting glucose,0.192761,0
+intervention:lanatoside_c,Lanatoside C,train,7,surrogate:p16ink4a_expression,p16INK4a expression,0.177192,0
+intervention:lanatoside_c,Lanatoside C,train,8,surrogate:f2,F2,0.175727,0
+intervention:lanatoside_c,Lanatoside C,train,9,surrogate:igf_1,IGF-1,0.171456,0
+intervention:lanatoside_c,Lanatoside C,train,10,surrogate:lean_mass,lean mass,0.157923,0
+intervention:liraglutide,Liraglutide,train,1,surrogate:met,MET,0.448263,2
+intervention:liraglutide,Liraglutide,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.438375,0
+intervention:liraglutide,Liraglutide,train,3,surrogate:hba1c,HbA1c,0.395409,3
+intervention:liraglutide,Liraglutide,train,4,surrogate:lean_mass,lean mass,0.356823,2
+intervention:liraglutide,Liraglutide,train,5,surrogate:sasp_panel,SASP panel,0.356343,0
+intervention:liraglutide,Liraglutide,train,6,surrogate:creatinine,creatinine,0.350418,3
+intervention:liraglutide,Liraglutide,train,7,surrogate:il6,IL6,0.313216,0
+intervention:liraglutide,Liraglutide,train,8,surrogate:fasting_glucose,fasting glucose,0.304256,3
+intervention:liraglutide,Liraglutide,train,9,surrogate:homa_ir,HOMA-IR,0.287867,3
+intervention:liraglutide,Liraglutide,train,10,surrogate:triglycerides,triglycerides,0.268246,0
+intervention:metformin,Metformin,train,1,surrogate:met,MET,0.387529,0
+intervention:metformin,Metformin,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.378659,2
+intervention:metformin,Metformin,train,3,surrogate:sasp_panel,SASP panel,0.338665,0
+intervention:metformin,Metformin,train,4,surrogate:hba1c,HbA1c,0.306484,2
+intervention:metformin,Metformin,train,5,surrogate:il6,IL6,0.263971,0
+intervention:metformin,Metformin,train,6,surrogate:creatinine,creatinine,0.252099,0
+intervention:metformin,Metformin,train,7,surrogate:triglycerides,triglycerides,0.249743,2
+intervention:metformin,Metformin,train,8,surrogate:fasting_glucose,fasting glucose,0.22322,0
+intervention:metformin,Metformin,train,9,surrogate:f2,F2,0.216738,0
+intervention:metformin,Metformin,train,10,surrogate:igf_1,IGF-1,0.202076,0
+intervention:nad_precursors,Nad+ Precursors,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.412426,3
+intervention:nad_precursors,Nad+ Precursors,train,2,surrogate:met,MET,0.394784,2
+intervention:nad_precursors,Nad+ Precursors,train,3,surrogate:hba1c,HbA1c,0.33502,0
+intervention:nad_precursors,Nad+ Precursors,train,4,surrogate:sasp_panel,SASP panel,0.302708,0
+intervention:nad_precursors,Nad+ Precursors,train,5,surrogate:creatinine,creatinine,0.275991,0
+intervention:nad_precursors,Nad+ Precursors,train,6,surrogate:fasting_glucose,fasting glucose,0.237144,0
+intervention:nad_precursors,Nad+ Precursors,train,7,surrogate:il6,IL6,0.231543,0
+intervention:nad_precursors,Nad+ Precursors,train,8,surrogate:triglycerides,triglycerides,0.228514,0
+intervention:nad_precursors,Nad+ Precursors,train,9,surrogate:lean_mass,lean mass,0.222999,0
+intervention:nad_precursors,Nad+ Precursors,train,10,surrogate:f2,F2,0.222823,0
+intervention:quercetin,Quercetin,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.403097,1
+intervention:quercetin,Quercetin,train,2,surrogate:sasp_panel,SASP panel,0.361923,3
+intervention:quercetin,Quercetin,train,3,surrogate:met,MET,0.352385,0
+intervention:quercetin,Quercetin,train,4,surrogate:il6,IL6,0.329138,2
+intervention:quercetin,Quercetin,train,5,surrogate:hba1c,HbA1c,0.296545,0
+intervention:quercetin,Quercetin,train,6,surrogate:creatinine,creatinine,0.260119,0
+intervention:quercetin,Quercetin,train,7,surrogate:p16ink4a_expression,p16INK4a expression,0.256661,3
+intervention:quercetin,Quercetin,train,8,surrogate:f2,F2,0.221678,1
+intervention:quercetin,Quercetin,train,9,surrogate:lean_mass,lean mass,0.219296,0
+intervention:quercetin,Quercetin,train,10,surrogate:igf_1,IGF-1,0.206272,0
+intervention:resveratrol,Resveratrol,train,1,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.412262,1
+intervention:resveratrol,Resveratrol,train,2,surrogate:sasp_panel,SASP panel,0.371777,0
+intervention:resveratrol,Resveratrol,train,3,surrogate:il6,IL6,0.334844,2
+intervention:resveratrol,Resveratrol,train,4,surrogate:hba1c,HbA1c,0.320682,3
+intervention:resveratrol,Resveratrol,train,5,surrogate:met,MET,0.320534,0
+intervention:resveratrol,Resveratrol,train,6,surrogate:lean_mass,lean mass,0.28558,0
+intervention:resveratrol,Resveratrol,train,7,surrogate:igf_1,IGF-1,0.283959,2
+intervention:resveratrol,Resveratrol,train,8,surrogate:p16ink4a_expression,p16INK4a expression,0.279671,0
+intervention:resveratrol,Resveratrol,train,9,surrogate:fasting_glucose,fasting glucose,0.253685,3
+intervention:resveratrol,Resveratrol,train,10,surrogate:creatinine,creatinine,0.237926,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,1,surrogate:met,MET,0.285086,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.246188,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,3,surrogate:sasp_panel,SASP panel,0.244206,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,4,surrogate:hba1c,HbA1c,0.237003,3
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,5,surrogate:il6,IL6,0.153899,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,6,surrogate:creatinine,creatinine,0.136956,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,7,surrogate:lean_mass,lean mass,0.12274,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,8,surrogate:igf_1,IGF-1,0.113752,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,9,surrogate:telomere_length,telomere length,0.092301,0
+intervention:sglt_2_inhibitors,Sglt-2 Inhibitors,train,10,surrogate:triglycerides,triglycerides,0.079544,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,1,surrogate:met,MET,0.352596,1
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.300449,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,3,surrogate:hba1c,HbA1c,0.286521,2
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,4,surrogate:sasp_panel,SASP panel,0.275821,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,5,surrogate:il6,IL6,0.179873,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,6,surrogate:lean_mass,lean mass,0.17053,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,7,surrogate:triglycerides,triglycerides,0.166249,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,8,surrogate:igf_1,IGF-1,0.163982,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,9,surrogate:creatinine,creatinine,0.161197,0
+intervention:sodium_glucose_cotransporter_2_inhibitors,Sodium-Glucose Cotransporter-2 Inhibitors,train,10,surrogate:f2,F2,0.121678,0
+intervention:tirzepatide,Tirzepatide,train,1,surrogate:met,MET,0.407422,3
+intervention:tirzepatide,Tirzepatide,train,2,surrogate:nad_nadh_ratio,NAD+ NADH ratio,0.381798,0
+intervention:tirzepatide,Tirzepatide,train,3,surrogate:lean_mass,lean mass,0.367343,2
+intervention:tirzepatide,Tirzepatide,train,4,surrogate:hba1c,HbA1c,0.354032,3
+intervention:tirzepatide,Tirzepatide,train,5,surrogate:sasp_panel,SASP panel,0.317532,0
+intervention:tirzepatide,Tirzepatide,train,6,surrogate:fasting_glucose,fasting glucose,0.297262,0
+intervention:tirzepatide,Tirzepatide,train,7,surrogate:creatinine,creatinine,0.282051,0
+intervention:tirzepatide,Tirzepatide,train,8,surrogate:igf_1,IGF-1,0.267045,0
+intervention:tirzepatide,Tirzepatide,train,9,surrogate:triglycerides,triglycerides,0.26315,2
+intervention:tirzepatide,Tirzepatide,train,10,surrogate:crp,CRP,0.253296,2

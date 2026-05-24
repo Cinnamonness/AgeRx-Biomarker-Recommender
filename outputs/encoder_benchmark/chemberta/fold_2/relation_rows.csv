@@ -1,0 +1,159 @@
+query_id,candidate_id,intervention,surrogate,relevance,label_weight
+intervention:acarbose,surrogate:homa_ir,Acarbose,HOMA-IR,3,1.58435
+intervention:acarbose,surrogate:mcp_1,Acarbose,MCP-1,2,1.50525
+intervention:acarbose,surrogate:sasp_panel,Acarbose,SASP panel,2,1.51925
+intervention:acarbose,surrogate:nad_nadh_ratio,Acarbose,NAD+ NADH ratio,1,1.42615
+intervention:acarbose,surrogate:hba1c,Acarbose,HbA1c,1,1.44785
+intervention:acarbose,surrogate:fasting_glucose,Acarbose,fasting glucose,1,1.44785
+intervention:betulinic_acid,surrogate:igf_1,Betulinic Acid,IGF-1,2,1.4874
+intervention:betulinic_acid,surrogate:tnf_alpha,Betulinic Acid,TNF-alpha,1,1.44575
+intervention:betulinic_acid,surrogate:ddc,Betulinic Acid,DDC,1,1.32675
+intervention:bleomycin,surrogate:pten,Bleomycin,PTEN,2,1.52315
+intervention:bleomycin,surrogate:sasp_panel,Bleomycin,SASP panel,3,1.6131
+intervention:bleomycin,surrogate:p16ink4a_expression,Bleomycin,p16INK4a expression,2,1.54
+intervention:bleomycin,surrogate:bdnf,Bleomycin,BDNF,1,1.43175
+intervention:bleomycin,surrogate:cd3e,Bleomycin,CD3E,1,1.3425
+intervention:coenzyme_q10,surrogate:crp,Coenzyme Q10,CRP,2,1.56475
+intervention:coenzyme_q10,surrogate:il6,Coenzyme Q10,IL6,2,1.56475
+intervention:coenzyme_q10,surrogate:atp_production,Coenzyme Q10,ATP production,1,1.45765
+intervention:coenzyme_q10,surrogate:hdl_c,Coenzyme Q10,HDL-C,2,1.52485
+intervention:coenzyme_q10,surrogate:ldl_c,Coenzyme Q10,LDL-C,2,1.52485
+intervention:coenzyme_q10,surrogate:triglycerides,Coenzyme Q10,triglycerides,2,1.52485
+intervention:corticosterone,surrogate:telomere_length,Corticosterone,telomere length,1,1.42055
+intervention:corticosterone,surrogate:il6,Corticosterone,IL6,2,1.4945
+intervention:corticosterone,surrogate:bdnf,Corticosterone,BDNF,1,1.41425
+intervention:curcumin,surrogate:pten,Curcumin,PTEN,2,1.5105
+intervention:curcumin,surrogate:crp,Curcumin,CRP,2,1.56475
+intervention:curcumin,surrogate:met,Curcumin,MET,2,1.52275
+intervention:curcumin,surrogate:body_fat_percentage,Curcumin,body fat percentage,2,1.54235
+intervention:curcumin,surrogate:il6,Curcumin,IL6,3,1.628
+intervention:curcumin,surrogate:sasp_panel,Curcumin,SASP panel,2,1.5085
+intervention:dapagliflozin,surrogate:creatinine,Dapagliflozin,creatinine,3,1.72575
+intervention:dapagliflozin,surrogate:nt_probnp,Dapagliflozin,NT-proBNP,3,1.6478
+intervention:dapagliflozin,surrogate:hba1c,Dapagliflozin,HbA1c,3,1.58435
+intervention:dapagliflozin,surrogate:met,Dapagliflozin,MET,3,1.5715
+intervention:dasatinib,surrogate:sasp_panel,Dasatinib,SASP panel,3,1.74835
+intervention:dasatinib,surrogate:triglycerides,Dasatinib,triglycerides,2,1.55635
+intervention:dasatinib,surrogate:p16ink4a_expression,Dasatinib,p16INK4a expression,3,1.6467
+intervention:dasatinib,surrogate:il6,Dasatinib,IL6,3,1.5691
+intervention:dasatinib,surrogate:kit,Dasatinib,KIT,1,1.35825
+intervention:dasatinib_quercetin,surrogate:sasp_panel,Dasatinib + Quercetin,SASP panel,3,1.7396
+intervention:dasatinib_quercetin,surrogate:p16ink4a_expression,Dasatinib + Quercetin,p16INK4a expression,3,1.5878
+intervention:dasatinib_quercetin,surrogate:telomere_length,Dasatinib + Quercetin,telomere length,1,1.4328
+intervention:dasatinib_quercetin,surrogate:il6,Dasatinib + Quercetin,IL6,1,1.47765
+intervention:dpp_4_inhibitors,surrogate:creatinine,Dpp-4 Inhibitors,creatinine,2,1.56135
+intervention:dpp_4_inhibitors,surrogate:hba1c,Dpp-4 Inhibitors,HbA1c,2,1.53895
+intervention:dpp_4_inhibitors,surrogate:fasting_glucose,Dpp-4 Inhibitors,fasting glucose,1,1.4636
+intervention:dual_glp_1_gip_receptor_agonists,surrogate:hba1c,Dual Glp-1/Gip Receptor Agonists,HbA1c,1,1.4636
+intervention:empagliflozin,surrogate:creatinine,Empagliflozin,creatinine,3,1.71385
+intervention:empagliflozin,surrogate:nt_probnp,Empagliflozin,NT-proBNP,3,1.61525
+intervention:empagliflozin,surrogate:hba1c,Empagliflozin,HbA1c,3,1.6459
+intervention:fisetin,surrogate:sasp_panel,Fisetin,SASP panel,3,1.7234
+intervention:fisetin,surrogate:bcl2,Fisetin,BCL2,2,1.493
+intervention:fisetin,surrogate:p16ink4a_expression,Fisetin,p16INK4a expression,2,1.53505
+intervention:fisetin,surrogate:nad_nadh_ratio,Fisetin,NAD+ NADH ratio,1,1.45325
+intervention:glp_1_receptor_agonists,surrogate:hba1c,Glp-1 Receptor Agonists,HbA1c,3,1.66285
+intervention:glp_1_receptor_agonists,surrogate:creatinine,Glp-1 Receptor Agonists,creatinine,2,1.52835
+intervention:glp_1_receptor_agonists,surrogate:hdl_c,Glp-1 Receptor Agonists,HDL-C,2,1.49335
+intervention:immune_checkpoint_inhibitors,surrogate:met,Immune Checkpoint Inhibitors,MET,2,1.54025
+intervention:immune_checkpoint_inhibitors,surrogate:hgf,Immune Checkpoint Inhibitors,HGF,1,1.402
+intervention:insulin,surrogate:crp,Insulin,CRP,3,1.626
+intervention:insulin,surrogate:hba1c,Insulin,HbA1c,3,1.6456
+intervention:insulin,surrogate:lean_mass,Insulin,lean mass,3,1.6036
+intervention:insulin,surrogate:igf_1,Insulin,IGF-1,3,1.58705
+intervention:lanatoside_c,surrogate:ldlr,Lanatoside C,LDLR,1,1.46325
+intervention:lanatoside_c,surrogate:il6,Lanatoside C,IL6,1,1.44575
+intervention:lanatoside_c,surrogate:mcp_1,Lanatoside C,MCP-1,1,1.44575
+intervention:lanatoside_c,surrogate:sasp_panel,Lanatoside C,SASP panel,1,1.45975
+intervention:liraglutide,surrogate:crp,Liraglutide,CRP,3,1.6575
+intervention:liraglutide,surrogate:homa_ir,Liraglutide,HOMA-IR,3,1.58435
+intervention:liraglutide,surrogate:creatinine,Liraglutide,creatinine,3,1.5771
+intervention:liraglutide,surrogate:fasting_glucose,Liraglutide,fasting glucose,3,1.6331
+intervention:liraglutide,surrogate:lean_mass,Liraglutide,lean mass,2,1.5126
+intervention:liraglutide,surrogate:hba1c,Liraglutide,HbA1c,3,1.6342
+intervention:liraglutide,surrogate:met,Liraglutide,MET,2,1.49125
+intervention:metformin,surrogate:hba1c,Metformin,HbA1c,2,1.55285
+intervention:metformin,surrogate:fasting_insulin,Metformin,fasting insulin,2,1.55285
+intervention:metformin,surrogate:triglycerides,Metformin,triglycerides,2,1.55285
+intervention:metformin,surrogate:nad_nadh_ratio,Metformin,NAD+ NADH ratio,2,1.5064
+intervention:microglial_depletion_repopulation_paradigms,surrogate:sasp_panel,Microglial Depletion-Repopulation Paradigms,SASP panel,2,1.51925
+intervention:mitoq,surrogate:il6,Mitoq,IL6,1,1.4755
+intervention:mitoq,surrogate:smad2,Mitoq,SMAD2,1,1.4335
+intervention:mitoq,surrogate:telomere_length,Mitoq,telomere length,1,1.4363
+intervention:mitoq,surrogate:sasp_panel,Mitoq,SASP panel,1,1.45975
+intervention:mitoq,surrogate:p16ink4a_expression,Mitoq,p16INK4a expression,1,1.45975
+intervention:mitoq,surrogate:nad_nadh_ratio,Mitoq,NAD+ NADH ratio,1,1.31765
+intervention:mitoq,surrogate:parp1,Mitoq,PARP1,1,1.29525
+intervention:mtor_inhibitors,surrogate:pam,Mtor Inhibitors,PAM,1,1.43
+intervention:mtor_inhibitors,surrogate:pten,Mtor Inhibitors,PTEN,1,1.29525
+intervention:n_acetylcysteine,surrogate:cystatin_c,N-Acetylcysteine,cystatin C,3,1.59135
+intervention:n_acetylcysteine,surrogate:crp,N-Acetylcysteine,CRP,3,1.626
+intervention:n_acetylcysteine,surrogate:il6,N-Acetylcysteine,IL6,3,1.5991
+intervention:n_acetylcysteine,surrogate:bcl2,N-Acetylcysteine,BCL2,1,1.40375
+intervention:n_acetylcysteine,surrogate:sasp_panel,N-Acetylcysteine,SASP panel,1,1.4125
+intervention:nad_precursors,surrogate:nad_nadh_ratio,Nad+ Precursors,NAD+ NADH ratio,3,1.75035
+intervention:nad_precursors,surrogate:met,Nad+ Precursors,MET,2,1.5385
+intervention:nad_therapeutics,surrogate:nad_nadh_ratio,Nad+ Therapeutics,NAD+ NADH ratio,1,1.3964
+intervention:nicotinamide_riboside,surrogate:nad_nadh_ratio,Nicotinamide Riboside,NAD+ NADH ratio,3,1.7312
+intervention:nicotinamide_riboside,surrogate:grimage,Nicotinamide Riboside,GrimAge,3,1.654
+intervention:nicotinamide_riboside,surrogate:phenoage,Nicotinamide Riboside,PhenoAge,3,1.654
+intervention:nicotinamide_riboside,surrogate:epigenetic_clock,Nicotinamide Riboside,epigenetic clock,3,1.654
+intervention:nicotinamide_riboside,surrogate:met,Nicotinamide Riboside,MET,2,1.5385
+intervention:nicotinamide_riboside,surrogate:sasp_panel,Nicotinamide Riboside,SASP panel,1,1.45975
+intervention:nmn,surrogate:nad_nadh_ratio,Nmn,NAD+ NADH ratio,3,1.7193
+intervention:nmn,surrogate:homa_ir,Nmn,HOMA-IR,3,1.6456
+intervention:nmn,surrogate:met,Nmn,MET,2,1.5385
+intervention:nmn,surrogate:parp1,Nmn,PARP1,1,1.46675
+intervention:quercetin,surrogate:sasp_panel,Quercetin,SASP panel,3,1.7055
+intervention:quercetin,surrogate:triglycerides,Quercetin,triglycerides,2,1.55635
+intervention:quercetin,surrogate:il6,Quercetin,IL6,2,1.56115
+intervention:quercetin,surrogate:p16ink4a_expression,Quercetin,p16INK4a expression,3,1.6008
+intervention:quercetin,surrogate:bdnf,Quercetin,BDNF,1,1.416
+intervention:quercetin,surrogate:nad_nadh_ratio,Quercetin,NAD+ NADH ratio,1,1.4104
+intervention:quercetin,surrogate:f2,Quercetin,F2,1,1.3845
+intervention:rapamycin,surrogate:igf_1,Rapamycin,IGF-1,1,1.47165
+intervention:rapamycin_analogs,surrogate:pten,Rapamycin Analogs,PTEN,2,1.49125
+intervention:rapamycin_analogs,surrogate:fasting_glucose,Rapamycin Analogs,fasting glucose,1,1.4041
+intervention:ras_inhibitors,surrogate:met,Ras Inhibitors,MET,2,1.54765
+intervention:ras_inhibitors,surrogate:creatinine,Ras Inhibitors,creatinine,1,1.4811
+intervention:resveratrol,surrogate:crp,Resveratrol,CRP,2,1.56475
+intervention:resveratrol,surrogate:hba1c,Resveratrol,HbA1c,3,1.58435
+intervention:resveratrol,surrogate:il6,Resveratrol,IL6,2,1.56475
+intervention:resveratrol,surrogate:fasting_glucose,Resveratrol,fasting glucose,3,1.58435
+intervention:resveratrol,surrogate:igf_1,Resveratrol,IGF-1,2,1.5344
+intervention:resveratrol,surrogate:nad_nadh_ratio,Resveratrol,NAD+ NADH ratio,1,1.42615
+intervention:semaglutide,surrogate:lean_mass,Semaglutide,lean mass,3,1.60535
+intervention:semaglutide,surrogate:hba1c,Semaglutide,HbA1c,3,1.68275
+intervention:semaglutide,surrogate:creatinine,Semaglutide,creatinine,2,1.52835
+intervention:senolytic_strategies,surrogate:sasp_panel,Senolytic Strategies,SASP panel,3,1.61585
+intervention:senolytic_strategies,surrogate:p16ink4a_expression,Senolytic Strategies,p16INK4a expression,3,1.57035
+intervention:senolytic_strategies,surrogate:il6,Senolytic Strategies,IL6,1,1.44575
+intervention:senolytic_therapies,surrogate:sasp_panel,Senolytic Therapies,SASP panel,3,1.66855
+intervention:senolytic_therapies,surrogate:p16ink4a_expression,Senolytic Therapies,p16INK4a expression,2,1.5342
+intervention:senolytic_therapies,surrogate:gpnmb,Senolytic Therapies,GPNMB,1,1.40375
+intervention:senolytic_therapies,surrogate:pten,Senolytic Therapies,PTEN,1,1.40375
+intervention:senolytic_therapies,surrogate:kdr,Senolytic Therapies,KDR,1,1.3565
+intervention:senolytics,surrogate:sasp_panel,Senolytics,SASP panel,3,1.6284
+intervention:senolytics,surrogate:nad_nadh_ratio,Senolytics,NAD+ NADH ratio,2,1.48565
+intervention:sglt_2_inhibitors,surrogate:hba1c,Sglt-2 Inhibitors,HbA1c,3,1.58435
+intervention:sglt2_inhibitors,surrogate:creatinine,Sglt2 Inhibitors,creatinine,3,1.59285
+intervention:sglt2_inhibitors,surrogate:nt_probnp,Sglt2 Inhibitors,NT-proBNP,2,1.55075
+intervention:sglt2_inhibitors,surrogate:hba1c,Sglt2 Inhibitors,HbA1c,3,1.61735
+intervention:sodium_glucose_cotransporter_2_inhibitors,surrogate:hba1c,Sodium-Glucose Cotransporter-2 Inhibitors,HbA1c,2,1.4951
+intervention:sodium_glucose_cotransporter_2_inhibitors,surrogate:met,Sodium-Glucose Cotransporter-2 Inhibitors,MET,1,1.4335
+intervention:spermidine,surrogate:igf_1,Spermidine,IGF-1,2,1.5064
+intervention:spermidine,surrogate:nad_nadh_ratio,Spermidine,NAD+ NADH ratio,2,1.5064
+intervention:spermidine,surrogate:telomere_length,Spermidine,telomere length,1,1.42055
+intervention:spermidine,surrogate:bdnf,Spermidine,BDNF,1,1.416
+intervention:tirzepatide,surrogate:hba1c,Tirzepatide,HbA1c,3,1.8121
+intervention:tirzepatide,surrogate:met,Tirzepatide,MET,3,1.64185
+intervention:tirzepatide,surrogate:crp,Tirzepatide,CRP,2,1.56475
+intervention:tirzepatide,surrogate:f2,Tirzepatide,F2,2,1.49125
+intervention:tirzepatide,surrogate:lean_mass,Tirzepatide,lean mass,2,1.48285
+intervention:tirzepatide,surrogate:triglycerides,Tirzepatide,triglycerides,2,1.51085
+intervention:urolithin_a,surrogate:atp_production,Urolithin A,ATP production,3,1.6064
+intervention:urolithin_a,surrogate:crp,Urolithin A,CRP,3,1.626
+intervention:urolithin_a,surrogate:dunedinpace,Urolithin A,DunedinPACE,3,1.6225
+intervention:urolithin_a,surrogate:bcl2,Urolithin A,BCL2,1,1.40375
+intervention:urolithin_a,surrogate:nad_nadh_ratio,Urolithin A,NAD+ NADH ratio,1,1.42615
+intervention:urolithin_a,surrogate:pten,Urolithin A,PTEN,1,1.40375
