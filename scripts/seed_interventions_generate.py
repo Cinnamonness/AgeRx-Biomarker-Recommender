@@ -3,6 +3,8 @@ import pandas as pd
 import json
 import time
 import re
+import os
+from pathlib import Path
 from collections import defaultdict
 from Bio import Entrez, Medline
 
@@ -10,7 +12,11 @@ API_KEY = os.getenv("LITELLM_API_KEY", "") # read your API key from the LITELLM_
 BASE_URL = os.getenv("LITELLM_BASE_URL", "") # set your base url via the LITELLM_BASE_URL environment variable
 MODEL = os.getenv("LITELLM_MODEL", "openai/gpt-5.4")  # LLM model name, e.g., "openai/gpt-4" or "openai/gpt-5.4"
 EMAIL = os.getenv("ENTREZ_EMAIL", "") # set your email via the ENTREZ_EMAIL environment variable
-OUTPUT_FILE = "seed_interventions.csv"
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = REPO_ROOT / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_FILE = DATA_DIR / "seed_interventions.csv"
 
 # ============================================================
 # CORE GEROSCIENCE QUERIES
