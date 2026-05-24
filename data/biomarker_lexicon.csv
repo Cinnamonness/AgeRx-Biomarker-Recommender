@@ -33,3 +33,90 @@ creatinine,creatinine,organ function,kidney function,loss of proteostasis
 NT-proBNP,NT-proBNP|N terminal pro BNP,cardiovascular,cardiac stress,altered intercellular communication
 body fat percentage,body fat percentage|body fat,body composition,energy balance,deregulated nutrient sensing
 lean mass,lean mass|fat free mass,body composition,muscle maintenance,stem cell exhaustion
+PTEN,PTEN,oncology,PI3K AKT mTOR signaling,genomic instability
+ERBB2,ERBB2,oncology,receptor tyrosine kinase signaling,genomic instability
+MET,MET,oncology,receptor tyrosine kinase signaling,genomic instability
+INSR,INSR,cardiovascular,PI3K AKT mTOR signaling,altered intercellular communication
+HNF1A,HNF1A,cardiovascular,glucose insulin signaling,altered intercellular communication
+RET,RET,oncology,receptor tyrosine kinase signaling,genomic instability
+FGFR2,FGFR2,cardiovascular,receptor tyrosine kinase signaling,altered intercellular communication
+GLP1R,GLP1R,cardiovascular,glucose insulin signaling,altered intercellular communication
+F2,F2,cardiovascular,coagulation cascade,altered intercellular communication
+FLT4,FLT4,oncology,receptor tyrosine kinase signaling,genomic instability
+KDR,KDR,oncology,receptor tyrosine kinase signaling,genomic instability
+LDLR,LDLR,cardiovascular,lipid metabolism,altered intercellular communication
+KIT,KIT,oncology,receptor tyrosine kinase signaling,genomic instability
+TGFBR2,TGFBR2,oncology,TGF-beta signaling,genomic instability
+AKT2,AKT2,oncology,PI3K AKT mTOR signaling,genomic instability
+NTRK3,NTRK3,oncology,receptor tyrosine kinase signaling,genomic instability
+CD274,CD274,oncology,immune checkpoint signaling,genomic instability
+PDGFRB,PDGFRB,oncology,receptor tyrosine kinase signaling,genomic instability
+CD74,CD74,oncology,immune checkpoint signaling,genomic instability
+NTRK2,NTRK2,oncology,receptor tyrosine kinase signaling,genomic instability
+PDGFRA,PDGFRA,oncology,receptor tyrosine kinase signaling,genomic instability
+ABL1,ABL1,oncology,receptor tyrosine kinase signaling,genomic instability
+RNF43,RNF43,oncology,Wnt signaling,genomic instability
+ERBB3,ERBB3,oncology,receptor tyrosine kinase signaling,genomic instability
+SMAD2,SMAD2,oncology,TGF-beta signaling,genomic instability
+KLK3,KLK3,oncology,prostate biology,genomic instability
+NOTCH1,NOTCH1,oncology,Notch signaling,genomic instability
+MSMB,MSMB,oncology,prostate biology,genomic instability
+ATP1B1,ATP1B1,cardiovascular,cardiac remodeling,altered intercellular communication
+RAD51,RAD51,oncology,DNA damage repair,genomic instability
+FGFR4,FGFR4,oncology,receptor tyrosine kinase signaling,genomic instability
+PDCD1,PDCD1,oncology,immune checkpoint signaling,genomic instability
+ATP1B2,ATP1B2,cardiovascular,cardiac remodeling,altered intercellular communication
+DDC,DDC,neurodegeneration,neurotransmitter metabolism,loss of proteostasis
+SORT1,SORT1,cardiovascular,lipid metabolism,altered intercellular communication
+SPTLC1,SPTLC1,neurodegeneration,sphingolipid metabolism,loss of proteostasis
+F10,F10,cardiovascular,coagulation cascade,altered intercellular communication
+PLG,PLG,cardiovascular,coagulation cascade,altered intercellular communication
+RRM2B,RRM2B,cardiovascular,DNA damage repair,altered intercellular communication
+TACSTD2,TACSTD2,oncology,cell proliferation signaling,genomic instability
+SERPINC1,SERPINC1,cardiovascular,coagulation cascade,altered intercellular communication
+EPHA2,EPHA2,oncology,receptor tyrosine kinase signaling,genomic instability
+HGF,HGF,oncology,receptor tyrosine kinase signaling,genomic instability
+PRC1,PRC1,oncology,cell proliferation signaling,genomic instability
+PARP1,PARP1,oncology,DNA damage repair,genomic instability
+BAG3,BAG3,cardiovascular,cardiac remodeling,altered intercellular communication
+FURIN,FURIN,cardiovascular,lipid metabolism,altered intercellular communication
+ANGPTL4,ANGPTL4,cardiovascular,glucose insulin signaling,altered intercellular communication
+CD33,CD33,neurodegeneration,immune checkpoint signaling,loss of proteostasis
+PGF,PGF,oncology,cell proliferation signaling,genomic instability
+EPHA1,EPHA1,neurodegeneration,receptor tyrosine kinase signaling,loss of proteostasis
+FGF5,FGF5,cardiovascular,cardiac remodeling,altered intercellular communication
+MAP2K1,MAP2K1,oncology,receptor tyrosine kinase signaling,genomic instability
+PAM,PAM,cardiovascular,glucose insulin signaling,altered intercellular communication
+ASAH1,ASAH1,cardiovascular,cardiac remodeling,altered intercellular communication
+IGF1R,IGF1R,cardiovascular,PI3K AKT mTOR signaling,altered intercellular communication
+IL7R,IL7R,oncology,immune checkpoint signaling,genomic instability
+GRP,GRP,metabolic,glucose insulin signaling,deregulated nutrient sensing
+CTRB1,CTRB1,cardiovascular,glucose insulin signaling,altered intercellular communication
+BST1,BST1,neurodegeneration,neurotransmitter metabolism,loss of proteostasis
+FOLH1,FOLH1,oncology,prostate biology,genomic instability
+BCL2,BCL2,oncology,apoptosis regulation,genomic instability
+PODXL,PODXL,neurodegeneration,neurotransmitter metabolism,loss of proteostasis
+LRIG3,LRIG3,oncology,cell proliferation signaling,genomic instability
+EHBP1,EHBP1,cardiovascular,vascular signaling,altered intercellular communication
+ABO,ABO,cardiovascular,lipid metabolism,altered intercellular communication
+IL6ST,IL6ST,oncology,immune checkpoint signaling,genomic instability
+IL6R,IL6R,cardiovascular,immune checkpoint signaling,altered intercellular communication
+EZR,EZR,oncology,cell proliferation signaling,genomic instability
+FLT3,FLT3,oncology,receptor tyrosine kinase signaling,genomic instability
+TFRC,TFRC,metabolic,glucose insulin signaling,deregulated nutrient sensing
+GPNMB,GPNMB,neurodegeneration,neurotransmitter metabolism,loss of proteostasis
+RASA1,RASA1,oncology,cell proliferation signaling,genomic instability
+CD3E,CD3E,oncology,immune checkpoint signaling,genomic instability
+CD3G,CD3G,oncology,immune checkpoint signaling,genomic instability
+RSPO3,RSPO3,oncology,Wnt signaling,genomic instability
+PROCR,PROCR,cardiovascular,coagulation cascade,altered intercellular communication
+RNASE4,RNASE4,neurodegeneration,neuroinflammation,loss of proteostasis
+DSG2,DSG2,cardiovascular,cardiac remodeling,altered intercellular communication
+IGF2R,IGF2R,cardiovascular,PI3K AKT mTOR signaling,altered intercellular communication
+TGFB2,TGFB2,cardiovascular,TGF-beta signaling,altered intercellular communication
+SMOC1,SMOC1,cardiovascular,cardiac remodeling,altered intercellular communication
+MPO,MPO,neurodegeneration,neuroinflammation,loss of proteostasis
+BDNF,BDNF,cardiovascular,neurotrophic signaling,altered intercellular communication
+CTSB,CTSB,neurodegeneration,neurotransmitter metabolism,loss of proteostasis
+LEP,LEP,metabolic,glucose insulin signaling,deregulated nutrient sensing
+NLGN1,NLGN1,metabolic,glucose insulin signaling,deregulated nutrient sensing
