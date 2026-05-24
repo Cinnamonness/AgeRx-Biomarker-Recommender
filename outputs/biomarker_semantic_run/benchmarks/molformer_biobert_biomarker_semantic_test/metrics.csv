@@ -1,4 +1,0 @@
-metric,value
-mrr@10,0.75
-recall@5,1.0
-ndcg@10,0.628184

@@ -1,4 +1,0 @@
-run_id,query_model,query_column,corpus_model,corpus_table,alignment,regularization,train_mrr@10,train_recall@5,train_ndcg@10,val_mrr@10,val_recall@5,val_ndcg@10,test_mrr@10,test_recall@5,test_ndcg@10
-chemberta_biobert_pair_ridge_v1,seyonec/ChemBERTa-zinc-base-v1,canonical_smiles,dmis-lab/biobert-base-cased-v1.2,pair_texts.csv,ridge,1.0,0.605357,0.75,0.43032,0.0,0.0,0.0,0.25,0.5,0.148748
-molformer_biobert_pair_ridge_v1,ibm-research/MoLFormer-XL-both-10pct,canonical_smiles,dmis-lab/biobert-base-cased-v1.2,pair_texts.csv,ridge,1.0,0.566667,0.875,0.390187,0.0,0.0,0.0,0.25,0.5,0.151241
-selformer_biobert_pair_ridge_v1,HUBioDataLab/SELFormer,selfies_sequence,dmis-lab/biobert-base-cased-v1.2,pair_texts.csv,ridge,1.0,0.530556,0.75,0.369302,0.0,0.0,0.0,0.25,0.5,0.146887

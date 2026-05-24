@@ -1,0 +1,4 @@
+encoder,preset,model_name,input_column,status,error,epochs_trained,best_val_mrr@10,train_mrr@10,train_recall@5,train_ndcg@10,val_mrr@10,val_recall@5,val_ndcg@10,test_mrr@10,test_recall@5,test_ndcg@10,run_dir
+ChemBERTa,chemberta,seyonec/ChemBERTa-zinc-base-v1,canonical_smiles,ok,,6,1.0,0.875,1.0,0.638265,1.0,1.0,0.681726,0.75,1.0,0.596107,/home/cinnamonness/longevmarker-ai/outputs/encoder_benchmark/chemberta
+MolFormer,molformer,ibm-research/MoLFormer-XL-both-10pct,canonical_smiles,ok,,5,1.0,0.9375,1.0,0.714184,1.0,1.0,0.393328,0.75,1.0,0.648394,/home/cinnamonness/longevmarker-ai/outputs/encoder_benchmark/molformer
+SELFormer,selformer,HUBioDataLab/SELFormer,selfies_sequence,ok,,7,1.0,0.84375,1.0,0.680612,1.0,1.0,0.571253,1.0,1.0,0.646759,/home/cinnamonness/longevmarker-ai/outputs/encoder_benchmark/selformer

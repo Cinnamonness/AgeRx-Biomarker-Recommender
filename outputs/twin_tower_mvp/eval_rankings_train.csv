@@ -1,0 +1,81 @@
+query_id,split,rank,candidate_id,surrogate,score,relevance
+mol_query_metformin,train,1,surrogate:fasting_insulin,fasting insulin,0.786693,3
+mol_query_metformin,train,2,surrogate:il6,IL6,0.755046,2
+mol_query_metformin,train,3,surrogate:crp,CRP,0.754065,2
+mol_query_metformin,train,4,surrogate:gdf15,GDF15,0.728041,2
+mol_query_metformin,train,5,surrogate:triglycerides,triglycerides,0.724308,0
+mol_query_metformin,train,6,surrogate:homa_ir,HOMA-IR,0.678055,3
+mol_query_metformin,train,7,surrogate:hba1c,HbA1c,0.666073,3
+mol_query_metformin,train,8,surrogate:fasting_glucose,fasting glucose,0.654501,0
+mol_query_metformin,train,9,surrogate:body_fat_percentage,body fat percentage,0.617783,0
+mol_query_metformin,train,10,surrogate:mtdna_copy_number,mtDNA copy number,0.599494,0
+mol_query_acarbose,train,1,surrogate:crp,CRP,0.787384,2
+mol_query_acarbose,train,2,surrogate:fasting_insulin,fasting insulin,0.755432,3
+mol_query_acarbose,train,3,surrogate:triglycerides,triglycerides,0.753891,2
+mol_query_acarbose,train,4,surrogate:fasting_glucose,fasting glucose,0.750902,3
+mol_query_acarbose,train,5,surrogate:body_fat_percentage,body fat percentage,0.683474,0
+mol_query_acarbose,train,6,surrogate:il6,IL6,0.680988,0
+mol_query_acarbose,train,7,surrogate:hba1c,HbA1c,0.676516,3
+mol_query_acarbose,train,8,surrogate:gdf15,GDF15,0.67196,0
+mol_query_acarbose,train,9,surrogate:mtdna_copy_number,mtDNA copy number,0.638409,0
+mol_query_acarbose,train,10,surrogate:atp_production,ATP production,0.584269,0
+mol_query_liraglutide,train,1,surrogate:fasting_glucose,fasting glucose,0.798968,3
+mol_query_liraglutide,train,2,surrogate:crp,CRP,0.794749,2
+mol_query_liraglutide,train,3,surrogate:triglycerides,triglycerides,0.791445,2
+mol_query_liraglutide,train,4,surrogate:fasting_insulin,fasting insulin,0.768829,2
+mol_query_liraglutide,train,5,surrogate:body_fat_percentage,body fat percentage,0.740933,3
+mol_query_liraglutide,train,6,surrogate:hba1c,HbA1c,0.721061,3
+mol_query_liraglutide,train,7,surrogate:gdf15,GDF15,0.662191,0
+mol_query_liraglutide,train,8,surrogate:il6,IL6,0.652191,0
+mol_query_liraglutide,train,9,surrogate:mtdna_copy_number,mtDNA copy number,0.566528,0
+mol_query_liraglutide,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.543752,0
+mol_query_empagliflozin,train,1,surrogate:crp,CRP,0.791982,2
+mol_query_empagliflozin,train,2,surrogate:fasting_glucose,fasting glucose,0.757595,3
+mol_query_empagliflozin,train,3,surrogate:triglycerides,triglycerides,0.756935,0
+mol_query_empagliflozin,train,4,surrogate:fasting_insulin,fasting insulin,0.704545,2
+mol_query_empagliflozin,train,5,surrogate:body_fat_percentage,body fat percentage,0.681144,2
+mol_query_empagliflozin,train,6,surrogate:il6,IL6,0.66412,0
+mol_query_empagliflozin,train,7,surrogate:gdf15,GDF15,0.615052,0
+mol_query_empagliflozin,train,8,surrogate:hba1c,HbA1c,0.598316,3
+mol_query_empagliflozin,train,9,surrogate:mtdna_copy_number,mtDNA copy number,0.585746,0
+mol_query_empagliflozin,train,10,surrogate:atp_production,ATP production,0.540568,0
+mol_query_fisetin,train,1,surrogate:crp,CRP,0.772681,0
+mol_query_fisetin,train,2,surrogate:triglycerides,triglycerides,0.749293,0
+mol_query_fisetin,train,3,surrogate:fasting_glucose,fasting glucose,0.740128,0
+mol_query_fisetin,train,4,surrogate:il6,IL6,0.706751,3
+mol_query_fisetin,train,5,surrogate:fasting_insulin,fasting insulin,0.685494,0
+mol_query_fisetin,train,6,surrogate:body_fat_percentage,body fat percentage,0.659412,0
+mol_query_fisetin,train,7,surrogate:gdf15,GDF15,0.647405,2
+mol_query_fisetin,train,8,surrogate:hba1c,HbA1c,0.602477,0
+mol_query_fisetin,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.579658,3
+mol_query_fisetin,train,10,surrogate:mtdna_copy_number,mtDNA copy number,0.559066,0
+mol_query_nicotinamide_riboside,train,1,surrogate:crp,CRP,0.787938,2
+mol_query_nicotinamide_riboside,train,2,surrogate:triglycerides,triglycerides,0.736315,0
+mol_query_nicotinamide_riboside,train,3,surrogate:fasting_glucose,fasting glucose,0.734225,0
+mol_query_nicotinamide_riboside,train,4,surrogate:fasting_insulin,fasting insulin,0.719314,2
+mol_query_nicotinamide_riboside,train,5,surrogate:il6,IL6,0.699252,2
+mol_query_nicotinamide_riboside,train,6,surrogate:mtdna_copy_number,mtDNA copy number,0.697583,3
+mol_query_nicotinamide_riboside,train,7,surrogate:atp_production,ATP production,0.654893,3
+mol_query_nicotinamide_riboside,train,8,surrogate:body_fat_percentage,body fat percentage,0.627333,0
+mol_query_nicotinamide_riboside,train,9,surrogate:gdf15,GDF15,0.611181,0
+mol_query_nicotinamide_riboside,train,10,surrogate:hba1c,HbA1c,0.532487,0
+mol_query_spermidine,train,1,surrogate:fasting_insulin,fasting insulin,0.778508,0
+mol_query_spermidine,train,2,surrogate:crp,CRP,0.764123,3
+mol_query_spermidine,train,3,surrogate:triglycerides,triglycerides,0.741336,0
+mol_query_spermidine,train,4,surrogate:il6,IL6,0.739167,3
+mol_query_spermidine,train,5,surrogate:fasting_glucose,fasting glucose,0.706564,0
+mol_query_spermidine,train,6,surrogate:gdf15,GDF15,0.702812,2
+mol_query_spermidine,train,7,surrogate:mtdna_copy_number,mtDNA copy number,0.675457,2
+mol_query_spermidine,train,8,surrogate:body_fat_percentage,body fat percentage,0.628708,0
+mol_query_spermidine,train,9,surrogate:atp_production,ATP production,0.582517,0
+mol_query_spermidine,train,10,surrogate:hba1c,HbA1c,0.576591,0
+mol_query_resveratrol,train,1,surrogate:crp,CRP,0.768074,3
+mol_query_resveratrol,train,2,surrogate:fasting_glucose,fasting glucose,0.74937,2
+mol_query_resveratrol,train,3,surrogate:triglycerides,triglycerides,0.745184,2
+mol_query_resveratrol,train,4,surrogate:fasting_insulin,fasting insulin,0.669123,0
+mol_query_resveratrol,train,5,surrogate:body_fat_percentage,body fat percentage,0.653198,0
+mol_query_resveratrol,train,6,surrogate:il6,IL6,0.652669,3
+mol_query_resveratrol,train,7,surrogate:gdf15,GDF15,0.593186,0
+mol_query_resveratrol,train,8,surrogate:p16ink4a_expression,p16INK4a expression,0.557999,0
+mol_query_resveratrol,train,9,surrogate:tnf_alpha,TNF-alpha,0.556203,2
+mol_query_resveratrol,train,10,surrogate:hba1c,HbA1c,0.547419,0

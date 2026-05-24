@@ -1,0 +1,30 @@
+{
+  "molecular_queries_csv": "/home/cinnamonness/longevmarker-ai/data/embedding/molecular_interventions.csv",
+  "biomarker_candidates_csv": "/home/cinnamonness/longevmarker-ai/data/embedding/biomarker_semantic_texts.csv",
+  "qrels_csv": "/home/cinnamonness/longevmarker-ai/data/embedding/molecular_biomarker_semantic_qrels.csv",
+  "triplets_csv": "/home/cinnamonness/longevmarker-ai/data/embedding/molecule_to_biomarker_semantic_triplets.csv",
+  "output_dir": "/home/cinnamonness/longevmarker-ai/outputs/encoder_benchmark/molformer",
+  "text_max_features": 4096,
+  "hidden_dim": 64,
+  "embedding_dim": 32,
+  "dropout": 0.1,
+  "triplet_margin": 0.2,
+  "bce_weight": 1.0,
+  "triplet_weight": 1.0,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "epochs": 10,
+  "early_stopping_patience": 4,
+  "batch_size": 4,
+  "top_k": 10,
+  "seed": 42,
+  "molecular_encoder": {
+    "preset": "molformer",
+    "model_name": "ibm-research/MoLFormer-XL-both-10pct",
+    "input_column": "canonical_smiles",
+    "trust_remote_code": true,
+    "representation": "smiles",
+    "max_length": null,
+    "device": "cpu"
+  }
+}

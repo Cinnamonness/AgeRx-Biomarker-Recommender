@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "longevmarker-ai"
+version = "0.1.0"
+description = "Literature-backed biomarker dataset builder for longevity interventions"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Codex" }]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

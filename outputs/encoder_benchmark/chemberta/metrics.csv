@@ -1,0 +1,10 @@
+split,metric,value
+train,mrr@10,0.875
+train,recall@5,1.0
+train,ndcg@10,0.638265
+val,mrr@10,1.0
+val,recall@5,1.0
+val,ndcg@10,0.681726
+test,mrr@10,0.75
+test,recall@5,1.0
+test,ndcg@10,0.596107

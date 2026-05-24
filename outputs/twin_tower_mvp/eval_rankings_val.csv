@@ -1,0 +1,21 @@
+query_id,split,rank,candidate_id,surrogate,score,relevance
+mol_query_rapamycin,val,1,surrogate:crp,CRP,0.772339,3
+mol_query_rapamycin,val,2,surrogate:fasting_insulin,fasting insulin,0.757091,2
+mol_query_rapamycin,val,3,surrogate:triglycerides,triglycerides,0.751101,0
+mol_query_rapamycin,val,4,surrogate:fasting_glucose,fasting glucose,0.743985,0
+mol_query_rapamycin,val,5,surrogate:hba1c,HbA1c,0.68408,0
+mol_query_rapamycin,val,6,surrogate:body_fat_percentage,body fat percentage,0.679359,0
+mol_query_rapamycin,val,7,surrogate:il6,IL6,0.649125,3
+mol_query_rapamycin,val,8,surrogate:gdf15,GDF15,0.639765,2
+mol_query_rapamycin,val,9,surrogate:mtdna_copy_number,mtDNA copy number,0.60284,0
+mol_query_rapamycin,val,10,surrogate:atp_production,ATP production,0.548304,0
+mol_query_nmn,val,1,surrogate:crp,CRP,0.785098,2
+mol_query_nmn,val,2,surrogate:triglycerides,triglycerides,0.738618,0
+mol_query_nmn,val,3,surrogate:fasting_glucose,fasting glucose,0.728623,0
+mol_query_nmn,val,4,surrogate:fasting_insulin,fasting insulin,0.723699,2
+mol_query_nmn,val,5,surrogate:il6,IL6,0.713351,0
+mol_query_nmn,val,6,surrogate:mtdna_copy_number,mtDNA copy number,0.67185,3
+mol_query_nmn,val,7,surrogate:body_fat_percentage,body fat percentage,0.644036,0
+mol_query_nmn,val,8,surrogate:gdf15,GDF15,0.637538,0
+mol_query_nmn,val,9,surrogate:atp_production,ATP production,0.630408,3
+mol_query_nmn,val,10,surrogate:hba1c,HbA1c,0.591123,0

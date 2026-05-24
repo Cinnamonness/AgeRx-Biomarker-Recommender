@@ -1,0 +1,81 @@
+query_id,split,rank,candidate_id,surrogate,score,relevance
+mol_query_metformin,train,1,surrogate:mtdna_copy_number,mtDNA copy number,0.819623,0
+mol_query_metformin,train,2,surrogate:il6,IL6,0.790019,2
+mol_query_metformin,train,3,surrogate:crp,CRP,0.758034,2
+mol_query_metformin,train,4,surrogate:gdf15,GDF15,0.7131,2
+mol_query_metformin,train,5,surrogate:fasting_insulin,fasting insulin,0.71229,3
+mol_query_metformin,train,6,surrogate:atp_production,ATP production,0.656507,0
+mol_query_metformin,train,7,surrogate:epigenetic_clock,epigenetic clock,0.623368,0
+mol_query_metformin,train,8,surrogate:triglycerides,triglycerides,0.606634,0
+mol_query_metformin,train,9,surrogate:body_fat_percentage,body fat percentage,0.579117,0
+mol_query_metformin,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.535752,0
+mol_query_acarbose,train,1,surrogate:crp,CRP,0.836099,2
+mol_query_acarbose,train,2,surrogate:fasting_insulin,fasting insulin,0.79355,3
+mol_query_acarbose,train,3,surrogate:il6,IL6,0.713792,0
+mol_query_acarbose,train,4,surrogate:mtdna_copy_number,mtDNA copy number,0.710471,0
+mol_query_acarbose,train,5,surrogate:gdf15,GDF15,0.704853,0
+mol_query_acarbose,train,6,surrogate:fasting_glucose,fasting glucose,0.687375,3
+mol_query_acarbose,train,7,surrogate:body_fat_percentage,body fat percentage,0.669956,0
+mol_query_acarbose,train,8,surrogate:triglycerides,triglycerides,0.647898,2
+mol_query_acarbose,train,9,surrogate:hba1c,HbA1c,0.600981,3
+mol_query_acarbose,train,10,surrogate:atp_production,ATP production,0.541421,0
+mol_query_liraglutide,train,1,surrogate:crp,CRP,0.781125,2
+mol_query_liraglutide,train,2,surrogate:fasting_insulin,fasting insulin,0.748074,2
+mol_query_liraglutide,train,3,surrogate:fasting_glucose,fasting glucose,0.675939,3
+mol_query_liraglutide,train,4,surrogate:gdf15,GDF15,0.647225,0
+mol_query_liraglutide,train,5,surrogate:il6,IL6,0.623259,0
+mol_query_liraglutide,train,6,surrogate:body_fat_percentage,body fat percentage,0.611953,3
+mol_query_liraglutide,train,7,surrogate:mtdna_copy_number,mtDNA copy number,0.596886,0
+mol_query_liraglutide,train,8,surrogate:hba1c,HbA1c,0.593462,3
+mol_query_liraglutide,train,9,surrogate:triglycerides,triglycerides,0.588008,2
+mol_query_liraglutide,train,10,surrogate:atp_production,ATP production,0.456359,0
+mol_query_empagliflozin,train,1,surrogate:crp,CRP,0.828159,2
+mol_query_empagliflozin,train,2,surrogate:fasting_insulin,fasting insulin,0.782472,2
+mol_query_empagliflozin,train,3,surrogate:il6,IL6,0.763607,0
+mol_query_empagliflozin,train,4,surrogate:gdf15,GDF15,0.75225,0
+mol_query_empagliflozin,train,5,surrogate:mtdna_copy_number,mtDNA copy number,0.704835,0
+mol_query_empagliflozin,train,6,surrogate:fasting_glucose,fasting glucose,0.676665,3
+mol_query_empagliflozin,train,7,surrogate:body_fat_percentage,body fat percentage,0.669002,2
+mol_query_empagliflozin,train,8,surrogate:triglycerides,triglycerides,0.660168,0
+mol_query_empagliflozin,train,9,surrogate:hba1c,HbA1c,0.555169,3
+mol_query_empagliflozin,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.540077,0
+mol_query_fisetin,train,1,surrogate:crp,CRP,0.79327,0
+mol_query_fisetin,train,2,surrogate:il6,IL6,0.765964,3
+mol_query_fisetin,train,3,surrogate:gdf15,GDF15,0.744152,2
+mol_query_fisetin,train,4,surrogate:fasting_insulin,fasting insulin,0.728814,0
+mol_query_fisetin,train,5,surrogate:mtdna_copy_number,mtDNA copy number,0.689644,0
+mol_query_fisetin,train,6,surrogate:body_fat_percentage,body fat percentage,0.658197,0
+mol_query_fisetin,train,7,surrogate:triglycerides,triglycerides,0.635024,0
+mol_query_fisetin,train,8,surrogate:fasting_glucose,fasting glucose,0.624056,0
+mol_query_fisetin,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.573184,3
+mol_query_fisetin,train,10,surrogate:epigenetic_clock,epigenetic clock,0.536872,0
+mol_query_nicotinamide_riboside,train,1,surrogate:crp,CRP,0.832245,2
+mol_query_nicotinamide_riboside,train,2,surrogate:fasting_insulin,fasting insulin,0.812798,2
+mol_query_nicotinamide_riboside,train,3,surrogate:il6,IL6,0.812006,2
+mol_query_nicotinamide_riboside,train,4,surrogate:mtdna_copy_number,mtDNA copy number,0.788578,3
+mol_query_nicotinamide_riboside,train,5,surrogate:gdf15,GDF15,0.779107,0
+mol_query_nicotinamide_riboside,train,6,surrogate:body_fat_percentage,body fat percentage,0.670562,0
+mol_query_nicotinamide_riboside,train,7,surrogate:triglycerides,triglycerides,0.669373,0
+mol_query_nicotinamide_riboside,train,8,surrogate:fasting_glucose,fasting glucose,0.653627,0
+mol_query_nicotinamide_riboside,train,9,surrogate:atp_production,ATP production,0.631553,3
+mol_query_nicotinamide_riboside,train,10,surrogate:p16ink4a_expression,p16INK4a expression,0.564219,0
+mol_query_spermidine,train,1,surrogate:mtdna_copy_number,mtDNA copy number,0.754205,2
+mol_query_spermidine,train,2,surrogate:il6,IL6,0.747234,3
+mol_query_spermidine,train,3,surrogate:crp,CRP,0.718724,3
+mol_query_spermidine,train,4,surrogate:gdf15,GDF15,0.688654,2
+mol_query_spermidine,train,5,surrogate:epigenetic_clock,epigenetic clock,0.671933,3
+mol_query_spermidine,train,6,surrogate:fasting_insulin,fasting insulin,0.606783,0
+mol_query_spermidine,train,7,surrogate:atp_production,ATP production,0.563418,0
+mol_query_spermidine,train,8,surrogate:triglycerides,triglycerides,0.559933,0
+mol_query_spermidine,train,9,surrogate:body_fat_percentage,body fat percentage,0.524462,0
+mol_query_spermidine,train,10,surrogate:hba1c,HbA1c,0.507591,0
+mol_query_resveratrol,train,1,surrogate:crp,CRP,0.762798,3
+mol_query_resveratrol,train,2,surrogate:il6,IL6,0.746888,3
+mol_query_resveratrol,train,3,surrogate:gdf15,GDF15,0.721366,0
+mol_query_resveratrol,train,4,surrogate:fasting_insulin,fasting insulin,0.674019,0
+mol_query_resveratrol,train,5,surrogate:mtdna_copy_number,mtDNA copy number,0.672303,0
+mol_query_resveratrol,train,6,surrogate:triglycerides,triglycerides,0.634231,2
+mol_query_resveratrol,train,7,surrogate:body_fat_percentage,body fat percentage,0.629221,0
+mol_query_resveratrol,train,8,surrogate:fasting_glucose,fasting glucose,0.60336,2
+mol_query_resveratrol,train,9,surrogate:p16ink4a_expression,p16INK4a expression,0.551432,0
+mol_query_resveratrol,train,10,surrogate:epigenetic_clock,epigenetic clock,0.525015,0

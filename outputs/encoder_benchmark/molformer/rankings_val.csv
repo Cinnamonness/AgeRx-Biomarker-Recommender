@@ -1,0 +1,21 @@
+query_id,split,rank,candidate_id,surrogate,score,relevance
+mol_query_rapamycin,val,1,surrogate:fasting_insulin,fasting insulin,0.518238,2
+mol_query_rapamycin,val,2,surrogate:fasting_glucose,fasting glucose,0.506548,0
+mol_query_rapamycin,val,3,surrogate:crp,CRP,0.366105,3
+mol_query_rapamycin,val,4,surrogate:hba1c,HbA1c,0.351539,0
+mol_query_rapamycin,val,5,surrogate:nt_probnp,NT-proBNP,0.343953,0
+mol_query_rapamycin,val,6,surrogate:body_fat_percentage,body fat percentage,0.337798,0
+mol_query_rapamycin,val,7,surrogate:triglycerides,triglycerides,0.275061,0
+mol_query_rapamycin,val,8,surrogate:il6,IL6,0.272501,3
+mol_query_rapamycin,val,9,surrogate:gdf15,GDF15,0.270441,2
+mol_query_rapamycin,val,10,surrogate:homa_ir,HOMA-IR,0.078392,0
+mol_query_nmn,val,1,surrogate:fasting_insulin,fasting insulin,0.590752,2
+mol_query_nmn,val,2,surrogate:crp,CRP,0.491995,2
+mol_query_nmn,val,3,surrogate:il6,IL6,0.4695,0
+mol_query_nmn,val,4,surrogate:triglycerides,triglycerides,0.463814,0
+mol_query_nmn,val,5,surrogate:gdf15,GDF15,0.455627,0
+mol_query_nmn,val,6,surrogate:body_fat_percentage,body fat percentage,0.424731,0
+mol_query_nmn,val,7,surrogate:fasting_glucose,fasting glucose,0.367319,0
+mol_query_nmn,val,8,surrogate:nt_probnp,NT-proBNP,0.340575,0
+mol_query_nmn,val,9,surrogate:homa_ir,HOMA-IR,0.336992,0
+mol_query_nmn,val,10,surrogate:hba1c,HbA1c,0.335889,0

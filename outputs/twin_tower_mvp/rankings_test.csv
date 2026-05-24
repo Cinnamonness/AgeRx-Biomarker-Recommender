@@ -1,0 +1,21 @@
+query_id,split,rank,candidate_id,surrogate,score,relevance
+mol_query_semaglutide,test,1,surrogate:fasting_glucose,fasting glucose,0.778388,3
+mol_query_semaglutide,test,2,surrogate:triglycerides,triglycerides,0.76766,2
+mol_query_semaglutide,test,3,surrogate:crp,CRP,0.761669,0
+mol_query_semaglutide,test,4,surrogate:fasting_insulin,fasting insulin,0.729282,2
+mol_query_semaglutide,test,5,surrogate:hba1c,HbA1c,0.71989,3
+mol_query_semaglutide,test,6,surrogate:body_fat_percentage,body fat percentage,0.713542,3
+mol_query_semaglutide,test,7,surrogate:gdf15,GDF15,0.618669,0
+mol_query_semaglutide,test,8,surrogate:il6,IL6,0.588912,0
+mol_query_semaglutide,test,9,surrogate:p16ink4a_expression,p16INK4a expression,0.520178,0
+mol_query_semaglutide,test,10,surrogate:mtdna_copy_number,mtDNA copy number,0.514439,0
+mol_query_dasatinib_quercetin,test,1,surrogate:crp,CRP,0.788247,2
+mol_query_dasatinib_quercetin,test,2,surrogate:fasting_glucose,fasting glucose,0.774684,0
+mol_query_dasatinib_quercetin,test,3,surrogate:triglycerides,triglycerides,0.774404,0
+mol_query_dasatinib_quercetin,test,4,surrogate:fasting_insulin,fasting insulin,0.723491,0
+mol_query_dasatinib_quercetin,test,5,surrogate:body_fat_percentage,body fat percentage,0.689328,0
+mol_query_dasatinib_quercetin,test,6,surrogate:il6,IL6,0.674286,3
+mol_query_dasatinib_quercetin,test,7,surrogate:hba1c,HbA1c,0.659584,0
+mol_query_dasatinib_quercetin,test,8,surrogate:gdf15,GDF15,0.649602,2
+mol_query_dasatinib_quercetin,test,9,surrogate:mtdna_copy_number,mtDNA copy number,0.566972,0
+mol_query_dasatinib_quercetin,test,10,surrogate:p16ink4a_expression,p16INK4a expression,0.560408,3

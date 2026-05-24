@@ -1,303 +1,364 @@
 # LongevMarker AI
 
-Drug-only biomarker recommendation MVP for longevity interventions, with a literature-backed curated dataset and embedding-ready benchmark package.
+LongevMarker AI is an MVP recommender system for **ranking surrogate biomarkers for chemical longevity interventions**.
 
-## Core rule
+The project goal is simple:
+- take a chemical intervention
+- use its molecular structure
+- compare it against biomarker semantic descriptions
+- return a ranked biomarker logit vector
 
-The central unit is an explicit `intervention -> surrogate` pair.
+## Context
 
-## Current scope
+Longevity studies are slow and expensive.
+A practical MVP is not to prove causality, but to recommend **which biomarkers are worth tracking** for a given intervention.
 
-- Only chemical interventions and drug-like compounds
-- Curated `intervention -> surrogate` runtime table
-- Molecular inputs for intervention-side encoders
-- Text inputs for biomarker and pair-side encoders
-- Retrieval benchmark package for comparing molecular encoders
+This repo now does that with a **chemical-structure to biomarker-text Twin Tower model**.
 
-## Main datasets
+## What was not changed
 
-### Runtime curated table
+The following parts were left untouched:
+- all tables in `data/`
+- all table-building and preprocessing logic
+- the existing processing scripts that generate training tables
+
+The source-of-truth table remains:
 - `data/processed/curated_biomarkers.csv`
-- 70 curated `intervention -> surrogate` rows
-- 12 chemical interventions
 
-### Chemical registry
-- `data/processed/compound_registry.csv`
-- `data/processed/compound_components.csv`
-- PubChem-backed SMILES and component-level decomposition
+## What the active model does
 
-### Text embedding tables
-- `data/embedding/intervention_texts.csv`
-- `data/embedding/surrogate_texts.csv`
-- `data/embedding/biomarker_semantic_texts.csv`
-- `data/embedding/pair_texts.csv`
-- `data/embedding/retrieval_corpus.csv`
-- `data/embedding/queries.csv`
-- `data/embedding/query_qrels.csv`
-- `data/embedding/contrastive_triplets.csv`
-- `data/embedding/pair_examples.csv`
+Input:
+- a chemical intervention represented by molecular structure
+- usually taken from `data/embedding/molecular_interventions.csv`
+- or provided manually as a structure string for inference
 
-### Molecular benchmark tables
+Output:
+- a **vector of biomarker logits** over the full biomarker candidate set
+- the same vector **ranked descending by score**
+- top-k biomarker recommendations
+
+So yes, the model output is:
+- one logit per biomarker candidate
+- then a ranked biomarker list built from those logits
+
+## Which tables the model uses
+
+### Main semantic source
+- `data/processed/curated_biomarkers.csv`
+
+### Existing generated embedding tables
+The model consumes these already-prepared files and does not modify them:
 - `data/embedding/molecular_interventions.csv`
-- `data/embedding/molecular_pair_qrels.csv`
-- `data/embedding/molecular_surrogate_qrels.csv`
+- `data/embedding/biomarker_semantic_texts.csv`
 - `data/embedding/molecular_biomarker_semantic_qrels.csv`
-- `data/embedding/molecule_to_pair_triplets.csv`
-- `data/embedding/molecule_to_surrogate_triplets.csv`
 - `data/embedding/molecule_to_biomarker_semantic_triplets.csv`
-- `data/embedding/encoder_candidates.csv`
-- `data/embedding/model_comparison_runs.csv`
-- `data/embedding/molecular_model_registry.csv`
-- `data/embedding/text_model_registry.csv`
 
-## Model strategy
+### Optional simpler biomarker table
+- `data/embedding/surrogate_texts.csv`
 
-### Intervention side
-Use molecular encoders on chemical structures.
+## Architecture
 
-- `ChemBERT` on `canonical_smiles` or `connectivity_smiles`
-- `MolFormer` on `canonical_smiles` or `connectivity_smiles`
-- `SELFormer` on `selfies_sequence`
+The active model is a **Twin Tower recommender**.
 
-### Biomarker side
-Use text encoders on biomarker semantics.
+### Left tower: intervention chemistry
+The left tower consumes molecular structure for the intervention.
 
-The recommended right tower is `biomarker_semantic_texts.csv`.
+Supported chemical encoders:
+- `ChemBERTa`
+- `MolFormer`
+- `SELFormer`
 
-Input text should include:
+Representations:
+- `ChemBERTa`: `canonical_smiles`
+- `MolFormer`: `canonical_smiles`
+- `SELFormer`: `selfies_sequence`
+
+The left side is responsible for encoding the intervention as chemistry, not as free text.
+
+### Right tower: biomarker semantics
+The right tower consumes biomarker text from:
+- `biomarker_semantic_texts.csv`
+
+Each candidate text already contains rich semantic context such as:
 - biomarker name
-- category
+- biomarker category
 - pathways
 - hallmarks
 - linked interventions
-- aggregated mechanism-of-action contexts
-- normalized mechanism themes
-- high-signal recommendation reasons
+- mechanism themes
+- short evidence-oriented description
 
-### Retrieval tasks
-1. `molecule -> biomarker_semantic_text`
-2. `molecule -> pair_text`
-3. `molecule -> surrogate_text`
+The right side is the final recommendation space.
+At inference time the model scores the molecule embedding against all biomarker candidate embeddings.
 
-## Recommended benchmark models
+### Backbone strategy
+The model uses:
+- a frozen pretrained chemical encoder on the left
+- a TF-IDF text encoder on the right
+- trainable projection heads on both sides
 
-### Molecular encoders
-- `seyonec/ChemBERTa-zinc-base-v1`
-- `ibm-research/MoLFormer-XL-both-10pct`
-- `HUBioDataLab/SELFormer`
+This keeps the MVP realistic:
+- no table changes
+- real molecular encoders are used
+- training stays lightweight enough for a hackathon-scale dataset
 
-### Text encoders
-- `microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext`
-- `dmis-lab/biobert-base-cased-v1.2`
-- a biomedical sentence-transformer variant if available in your environment
+### Projection heads
+After base features are computed:
+- molecular features go through a trainable query projection tower
+- biomarker text features go through a trainable candidate projection tower
 
-## Setup
+Each tower applies:
+- linear layer
+- layer norm
+- GELU
+- dropout
+- final linear layer
+- L2 normalization
 
-### Full environment from requirements
+### Scoring
+The final score is a temperature-scaled dot product between:
+- projected intervention embedding
+- projected biomarker embedding
+
+For one intervention query, the model returns:
+- `logits shape = [number_of_biomarker_candidates]`
+
+For the current saved MVP run:
+- `logits shape = [19]`
+
+Then logits are sorted descending to produce the final ranking.
+
+## How supervision works
+
+The model is trained directly on the intervention-surrogate relation that already exists in the generated molecular tables.
+
+### 1. Multi-label BCE over biomarker candidates
+From:
+- `molecular_biomarker_semantic_qrels.csv`
+
+For each intervention query:
+- relevant biomarkers are positives
+- the rest are negatives
+- relevance values weight the positive supervision
+
+This is the main loss that teaches the model to output a biomarker logit vector.
+
+### 2. Hard-negative triplet loss
+From:
+- `molecule_to_biomarker_semantic_triplets.csv`
+
+For each anchor intervention:
+- one correct biomarker semantic candidate is positive
+- one hard negative biomarker semantic candidate is negative
+
+This sharpens ranking around confusing biomarker candidates.
+
+### Final training objective
+The current model uses:
+- weighted BCE loss over the full biomarker candidate set
+- triplet margin loss over hard negatives
+
+So this is a **chemical-to-biomarker retrieval model with ranking-aware supervision**.
+
+## Chemical encoder comparison
+
+Different chemical encoders were actually tested in the new Twin Tower.
+
+Benchmark file:
+- `outputs/encoder_benchmark/encoder_comparison.csv`
+
+Compared encoders:
+- `ChemBERTa`
+- `MolFormer`
+- `SELFormer`
+
+Benchmark results on the current dataset:
+
+- `ChemBERTa`: test `MRR@10 = 0.75`, `Recall@5 = 1.0`, `nDCG@10 = 0.596107`
+- `MolFormer`: test `MRR@10 = 0.75`, `Recall@5 = 1.0`, `nDCG@10 = 0.648394`
+- `SELFormer`: test `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.646759`
+
+Current active MVP run is based on:
+- `SELFormer`
+
+Why it was selected:
+- best `test MRR@10`
+- full retrieval worked end-to-end on the current dataset
+
+## Active code
+
+### Main model module
+- `src/longevmarker/twin_tower.py`
+
+This file contains:
+- chemical encoder loading
+- TF-IDF biomarker text encoding
+- Twin Tower model
+- training loop
+- evaluation
+- prediction
+
+### Benchmark module
+- `src/longevmarker/twin_tower_benchmark.py`
+
+### CLI entry points
+- `scripts/train_twin_tower.py`
+- `scripts/evaluate_twin_tower.py`
+- `scripts/predict_biomarkers.py`
+- `scripts/benchmark_chemical_encoders.py`
+
+## Processing code that remains untouched
+
+These stay in the repo as-is:
+- `scripts/build_literature_dataset.py`
+- `scripts/prepare_embedding_materials.py`
+- `scripts/fetch_compound_registry.py`
+- `scripts/prepare_molecular_embedding_materials.py`
+- `scripts/populate_selfies_sequences.py`
+- `src/longevmarker/dataset_builder.py`
+- `src/longevmarker/embedding_data.py`
+- `src/longevmarker/compound_registry.py`
+- `src/longevmarker/molecular_embedding_data.py`
+- `src/longevmarker/selfies_data.py`
+- related PubMed / PubTator / biomarker matcher code
+
+## How to run
+
+### 1. Make sure the existing embedding tables already exist
+If needed, regenerate them with the unchanged processing scripts:
+
 ```bash
-cd /home/cinnamonness/longevmarker-ai
-python3 -m pip install --user -r requirements.txt
-```
-
-### Recommended runtime install for the first baseline
-Use CPU-only PyTorch plus `transformers 4.x`.
-
-```bash
-cd /home/cinnamonness/longevmarker-ai
-python3 -m pip install --user --extra-index-url https://download.pytorch.org/whl/cpu torch 'transformers>=4.52,<5'
-```
-
-## Data preparation workflow
-
-### 1. Rebuild the literature dataset
-```bash
-python3 scripts/build_literature_dataset.py --retmax 20 --use-pubtator
-```
-
-### 2. Rebuild embedding-ready text tables
-```bash
+cd /longevmarker-ai
 python3 scripts/prepare_embedding_materials.py
-```
-
-### 3. Fetch the compound registry from PubChem
-```bash
-python3 scripts/fetch_compound_registry.py
-```
-
-### 4. Build molecular benchmark tables
-```bash
 python3 scripts/prepare_molecular_embedding_materials.py
-```
-
-### 5. Populate SELFIES for SELFormer
-```bash
 python3 scripts/populate_selfies_sequences.py
 ```
 
-## Embedding extraction
+### 2. Train one Twin Tower run
+Example: active recommended run with `SELFormer`
 
-### Important architecture note
-Raw molecule embeddings and raw biomarker-text embeddings do not live in the same space.
-
-That means the minimal working pipeline is:
-1. embed molecular queries
-2. embed biomarker or pair texts
-3. learn an alignment layer on the train split
-4. run retrieval on the aligned query embeddings
-
-### Molecule embeddings
-Example for ChemBERTa:
 ```bash
-python3 scripts/embed_molecules.py   --input-csv data/embedding/molecular_interventions.csv   --id-column query_id   --input-column canonical_smiles   --model-name seyonec/ChemBERTa-zinc-base-v1   --batch-size 4   --output-prefix outputs/chemberta_queries
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/train_twin_tower.py \
+  --molecule-encoder selformer \
+  --output-dir outputs/twin_tower_mvp \
+  --device cpu
 ```
 
-Example for MolFormer:
+Example: train with `MolFormer`
+
 ```bash
-python3 scripts/embed_molecules.py   --input-csv data/embedding/molecular_interventions.csv   --id-column query_id   --input-column canonical_smiles   --model-name ibm-research/MoLFormer-XL-both-10pct   --trust-remote-code   --batch-size 4   --output-prefix outputs/molformer_queries
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/train_twin_tower.py \
+  --molecule-encoder molformer \
+  --output-dir outputs/twin_tower_molformer \
+  --device cpu
 ```
 
-Example for SELFormer:
+Example: train with `ChemBERTa`
+
 ```bash
-python3 scripts/embed_molecules.py   --input-csv data/embedding/molecular_interventions.csv   --id-column query_id   --input-column selfies_sequence   --model-name HUBioDataLab/SELFormer   --batch-size 4   --output-prefix outputs/selformer_queries
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/train_twin_tower.py \
+  --molecule-encoder chemberta \
+  --output-dir outputs/twin_tower_chemberta \
+  --device cpu
 ```
 
-### Text embeddings
-Recommended right tower for chemical-to-biomarker retrieval with BioBERT:
+### 3. Benchmark all three chemical encoders
+
 ```bash
-python3 scripts/embed_texts.py   --input-csv data/embedding/biomarker_semantic_texts.csv   --id-column surrogate_id   --text-column embedding_text   --model-name dmis-lab/biobert-base-cased-v1.2   --batch-size 4   --output-prefix outputs/biobert_biomarker_semantic_texts
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/benchmark_chemical_encoders.py \
+  --output-dir outputs/encoder_benchmark \
+  --device cpu
 ```
 
-Example for pair texts with BioBERT:
+### 4. Evaluate the active model
+
 ```bash
-python3 scripts/embed_texts.py   --input-csv data/embedding/pair_texts.csv   --id-column pair_id   --text-column embedding_text   --model-name dmis-lab/biobert-base-cased-v1.2   --batch-size 4   --output-prefix outputs/biobert_pair_texts
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/evaluate_twin_tower.py \
+  --model-dir outputs/twin_tower_mvp \
+  --device cpu
 ```
 
-Example for surrogate texts with PubMedBERT:
+### 5. Predict biomarkers for an existing intervention in the saved query table
+
 ```bash
-python3 scripts/embed_texts.py   --input-csv data/embedding/surrogate_texts.csv   --id-column surrogate_id   --text-column embedding_text   --model-name microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext   --batch-size 4   --output-prefix outputs/pubmedbert_surrogate_texts
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/predict_biomarkers.py \
+  --model-dir outputs/twin_tower_mvp \
+  --intervention Metformin \
+  --top-k 10 \
+  --device cpu
 ```
 
-### Alignment layer
-Ridge alignment from molecular embedding space into the text embedding space.
+### 6. Predict biomarkers for a custom structure
+If you pass `--structure`, the structure must match the active encoder representation.
 
-Recommended chemical-to-biomarker semantic alignment:
+Examples:
+- for `ChemBERTa` or `MolFormer`: pass SMILES
+- for `SELFormer`: pass SELFIES
+
 ```bash
-python3 scripts/align_embeddings.py   --query-prefix outputs/molformer_queries   --corpus-prefix outputs/biobert_biomarker_semantic_texts   --qrels-csv data/embedding/molecular_biomarker_semantic_qrels.csv   --output-prefix outputs/molformer_to_biobert_biomarker_semantic_aligned   --train-split train   --eval-splits train,val,test   --regularization 1.0   --top-k 10
+cd /longevmarker-ai
+PYTHONPATH=src python3 scripts/predict_biomarkers.py \
+  --model-dir outputs/twin_tower_mvp \
+  --structure "[C][N][Branch1][C][C][C][=Branch1][C][=N][N][=C][Branch1][C][N][N]" \
+  --top-k 10 \
+  --device cpu
 ```
 
-### Output files
-Each embedding script writes:
+## What prediction returns
 
-- `<output-prefix>.embeddings.npy`
-- `<output-prefix>.metadata.csv`
+The prediction script computes:
+- one logit per biomarker candidate
+- then ranks all candidates descending by logit
 
-The alignment step also writes:
+Printed output includes:
+- rank
+- biomarker name
+- logit
+- biomarker category
+- pathways
+- hallmarks
 
-- `<output-prefix>.alignment.npz`
-- `<output-prefix>.metrics.csv`
+Example current active run for `Metformin` top-5:
+- `fasting insulin`
+- `IL6`
+- `CRP`
+- `GDF15`
+- `triglycerides`
 
-## Retrieval benchmark
+## Saved model artifacts
 
-### Molecule -> biomarker semantic retrieval from aligned queries
-```bash
-python3 scripts/run_retrieval_benchmark.py   --query-prefix outputs/molformer_to_biobert_biomarker_semantic_aligned   --corpus-prefix outputs/biobert_biomarker_semantic_texts   --qrels-csv data/embedding/molecular_biomarker_semantic_qrels.csv   --only-split test   --output-dir outputs/benchmarks/molformer_biobert_biomarker_semantic_test
-```
-
-### Molecule -> pair retrieval from aligned queries
-```bash
-python3 scripts/run_retrieval_benchmark.py   --query-prefix outputs/chemberta_to_biobert_pair_aligned   --corpus-prefix outputs/biobert_pair_texts   --qrels-csv data/embedding/molecular_pair_qrels.csv   --only-split test   --output-dir outputs/benchmarks/chemberta_biobert_pair_test
-```
-
-### Molecule -> surrogate retrieval from aligned queries
-```bash
-python3 scripts/run_retrieval_benchmark.py   --query-prefix outputs/selformer_queries   --corpus-prefix outputs/pubmedbert_surrogate_texts   --qrels-csv data/embedding/molecular_surrogate_qrels.csv   --output-dir outputs/benchmarks/selformer_surrogate
-```
-
-### Benchmark outputs
-Each retrieval run writes:
-
+The active model run in `outputs/twin_tower_mvp` contains:
+- `model.pt`
+- `config.json`
+- `text_vectorizer.pkl`
+- `query_base_features.npy`
+- `candidate_base_features.npy`
+- `query_rows.csv`
+- `biomarker_candidates.csv`
+- `training_history.csv`
 - `metrics.csv`
-- `rankings.csv`
+- `rankings_train.csv`
+- `rankings_val.csv`
+- `rankings_test.csv`
+- `eval_metrics.csv`
+- `eval_rankings_train.csv`
+- `eval_rankings_val.csv`
+- `eval_rankings_test.csv`
 
-## Baseline runs
+## Current active MVP run
 
-### Recommended chemical -> biomarker semantic baseline
-This is now the primary right-tower setup for biomarker retrieval.
+The cleaned repo now keeps:
+- one active model run in `outputs/twin_tower_mvp`
+- one benchmark directory in `outputs/encoder_benchmark`
 
-Artifacts:
-- `outputs/biomarker_semantic_run/biobert_biomarker_semantic_texts.*`
-- `outputs/biomarker_semantic_run/molformer_to_biobert_biomarker_semantic_aligned.*`
-- `outputs/biomarker_semantic_run/benchmarks/molformer_biobert_biomarker_semantic_train/`
-- `outputs/biomarker_semantic_run/benchmarks/molformer_biobert_biomarker_semantic_val/`
-- `outputs/biomarker_semantic_run/benchmarks/molformer_biobert_biomarker_semantic_test/`
-- `outputs/biomarker_semantic_run/run_summary.csv`
-- `outputs/model_comparison/biomarker_semantic_runs.csv`
+Current active run metrics (`SELFormer`):
+- train `MRR@10 = 0.84375`, `Recall@5 = 1.0`, `nDCG@10 = 0.680612`
+- val `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.571253`
+- test `MRR@10 = 1.0`, `Recall@5 = 1.0`, `nDCG@10 = 0.646759`
 
-Configuration:
-- query model: `ibm-research/MoLFormer-XL-both-10pct`
-- query input: `canonical_smiles`
-- corpus model: `dmis-lab/biobert-base-cased-v1.2`
-- corpus table: `biomarker_semantic_texts.csv`
-- alignment: ridge, `regularization = 1.0`
-
-Metrics:
-- train `MRR@10 = 0.854167`, `Recall@5 = 1.0`, `nDCG@10 = 0.676466`
-- val `MRR@10 = 0.333333`, `Recall@5 = 1.0`, `nDCG@10 = 0.281185`
-- test `MRR@10 = 0.75`, `Recall@5 = 1.0`, `nDCG@10 = 0.628184`
-
-Interpretation:
-- adding `hallmarks + pathways + aggregated MoA contexts` on the biomarker side changes the task materially for the better
-- this right tower generalizes much better than the earlier `pair_texts` and `surrogate_texts` baselines
-- the semantic biomarker profile should be treated as the default retrieval corpus for compound-to-biomarker recommendation
-
-### Legacy pair-retrieval baselines
-These remain useful as auxiliary baselines and reranking corpora.
-
-#### ChemBERTa + BioBERT + ridge
-- test `MRR@10 = 0.25`, `Recall@5 = 0.5`, `nDCG@10 = 0.148748`
-
-#### MolFormer + BioBERT + ridge
-- test `MRR@10 = 0.25`, `Recall@5 = 0.5`, `nDCG@10 = 0.151241`
-
-#### SELFormer + BioBERT + ridge
-- test `MRR@10 = 0.25`, `Recall@5 = 0.5`, `nDCG@10 = 0.146887`
-
-### Comparison files
-- `outputs/model_comparison/pair_benchmark_comparison.csv`
-- `outputs/model_comparison/biomarker_semantic_runs.csv`
-
-## Evaluation metrics
-
-Compare runs by:
-- `MRR@10`
-- `Recall@5`
-- `nDCG@10`
-
-## Recommended order
-
-1. Build or refresh the curated and molecular datasets.
-2. Populate `SELFIES` and verify `selfies_conversion_status == ok`.
-3. Generate molecular embeddings for one encoder family.
-4. Generate `biomarker_semantic_texts.csv` embeddings with a biomedical text encoder.
-5. Train the ridge alignment on the `train` split against `molecular_biomarker_semantic_qrels.csv`.
-6. Benchmark `train`, `val`, and `test` separately.
-7. Use `pair_texts.csv` as a secondary corpus for explanation or reranking, not as the primary biomarker retrieval target.
-8. Only after that, add projection heads or contrastive fine-tuning.
-
-## Notes
-
-- `ChemBERT` and `MolFormer` are configured as SMILES-based branches.
-- `SELFormer` is configured as a SELFIES-based branch.
-- `molecular_model_registry.csv` and `text_model_registry.csv` define the recommended model matrix.
-- Combination interventions should start with mean pooling over component embeddings.
-- The first strong cross-modal biomarker baseline uses frozen encoders plus a learned linear alignment.
-- `biomarker_semantic_texts.csv` is the preferred right-tower corpus for compound-to-biomarker retrieval.
-- `pair_texts.csv` is still useful for explanation, evidence display, and reranking.
-- The text side can remain frozen for the first baseline; then you can add projection heads and contrastive fine-tuning.
-
-## Source references
-
-- PubChem PUG REST API: https://pubchem.ncbi.nlm.nih.gov/rest/pug/
-- MolFormer model card: https://huggingface.co/ibm-research/MoLFormer-XL-both-10pct
-- ChemBERTa model card: https://huggingface.co/seyonec/ChemBERTa-zinc-base-v1
-- SELFormer model card: https://huggingface.co/HUBioDataLab/SELFormer
